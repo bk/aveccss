@@ -1,0 +1,50 @@
+// A card is just an article
+
+article {
+    margin: calc(var(--spacing) * 2) 0;
+    padding: var(--spacing) calc(var(--spacing) * 2);
+    border-radius: var(--border-radius);
+    background: var(--card-bg);
+    box-shadow: var(--box-shadow);
+    // align-self: start;
+    > header {
+        margin: calc(var(--spacing) * -1) calc(var(--spacing) * -2) var(--spacing) calc(var(--spacing) * -2);
+        background: var(--accent-bg);
+        border-bottom: 1px solid var(--border);
+        > *, > a > * {
+            margin: 0;
+            padding: var(--spacing) calc(var(--spacing) * 2);
+        }
+        // NOTE: border-radius for top of image, but only if it is the
+        //       first element in the header
+        > img, > a, > a > img {
+            display: block;
+            padding: 0;
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
+        }
+        // set border-radius for img to 0 if it follows anything
+        > * + img, > * + a, > * + a > img  {
+            --border-radius: 0;
+        }
+    }
+    > footer {
+        margin: var(--spacing) calc(var(--spacing) * -2) calc(var(--spacing) * -1) calc(var(--spacing) * -2);
+        background: var(--accent-bg);
+        border-top: 1px solid var(--border);
+        > * {
+            margin: 0;
+            padding: var(--spacing) calc(var(--spacing) * 2);
+        }
+    }
+}
+
+// Make sure the footer is at the bottom
+// when cards are side-by side.
+.grid > article, .grid-sm > article, .grid-xs > article {
+    display: flex;
+    flex-direction: column;
+    > footer {
+        margin-top: auto;
+    }
+}

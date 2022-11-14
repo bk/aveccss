@@ -1,0 +1,20 @@
+// Relative font size
+.larger {
+    font-size: larger;
+}
+.smaller {
+    font-size: smaller;
+}
+
+// Font family
+.sans {
+    font-family: var(--sans-font);
+}
+
+.serif {
+    font-family: var(--serif-font);
+}
+
+.mono {
+    font-family: var(--mono-font);
+}

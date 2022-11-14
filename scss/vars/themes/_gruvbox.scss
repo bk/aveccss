@@ -1,0 +1,95 @@
+// Gruvbox light + dark
+// Source: https://github.com/dawikur/base16-gruvbox-scheme/
+
+$theme-auto-switch: true !default; // if true, switches to dark mode based on user preference
+$dark-mode-antiglare: false !default; // enable to darken images and videos in dark mode
+
+// scheme: "Gruvbox light, hard"
+// author: "Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)"
+// base00: "#f9f5d7" # ----
+// base01: "#ebdbb2" # ---
+// base02: "#d5c4a1" # --
+// base03: "#bdae93" # -
+// base04: "#665c54" # +
+// base05: "#504945" # ++
+// base06: "#3c3836" # +++
+// base07: "#282828" # ++++
+// base08: "#9d0006" # red
+// base09: "#af3a03" # orange
+// base0A: "#b57614" # yellow
+// base0B: "#79740e" # green
+// base0C: "#427b58" # aqua/cyan
+// base0D: "#076678" # blue
+// base0E: "#8f3f71" # purple
+// base0F: "#d65d0e" # brown
+
+$light-bg: #f9f5d7  !default; //base00
+$light-card-bg: #fffadd !default; // not in original
+$light-accent-bg: #ebdbb2 !default; // base01
+$light-contrast-bg: #d5c4a1 !default; // base02
+$light-text: #282828 !default; // base07
+$light-text-vivid: black !default;
+$light-text-light: #504945 !default; // base05
+$light-text-heading: $light-text !default;
+$light-border: #bdae93 !default; // base03
+$light-accent: #076678 !default; // base0d
+$light-code: #9d0006 !default; // base08
+$light-preformatted: #3c3836 !default; // base06
+$light-marked: #fff8b0 !default; // not in original
+$light-disabled: #efefef !default; // not in original
+$light-info: mediumblue !default;
+$light-warning: darkorange !default;
+$light-error: firebrick !default;
+$light-success: forestgreen !default;
+$light-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
+                   0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.024),
+                   0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.03),
+                   0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.036),
+                   0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.04302),
+                   0.5rem 1rem 6rem rgba(27, 40, 50, 0.06),
+                   0 0 0 0.0625rem rgba(27, 40, 50, 0.015);
+
+// scheme: "Gruvbox dark, medium"
+// author: "Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)"
+// base00: "#282828" # ----
+// base01: "#3c3836" # ---
+// base02: "#504945" # --
+// base03: "#665c54" # -
+// base04: "#bdae93" # +
+// base05: "#d5c4a1" # ++
+// base06: "#ebdbb2" # +++
+// base07: "#fbf1c7" # ++++
+// base08: "#fb4934" # red
+// base09: "#fe8019" # orange
+// base0A: "#fabd2f" # yellow
+// base0B: "#b8bb26" # green
+// base0C: "#8ec07c" # aqua/cyan
+// base0D: "#83a598" # blue
+// base0E: "#d3869b" # purple
+// base0F: "#d65d0e" # brown
+
+$dark-bg: #282828 !default; // base00
+$dark-card-bg: #161514 !default; // not in original
+$dark-accent-bg: #3c3836 !default; // base01
+$dark-contrast-bg: #665c54 !default; // base03
+$dark-text: #fbf1c7 !default; // base07
+$dark-text-vivid: white !default;
+$dark-text-light: #d5c4a1 !default; // base05
+$dark-text-heading: $dark-text !default;
+$dark-border: #504945 !default; // base02
+$dark-accent: #fabd2f !default; // base0a
+$dark-code: #e5cce1 !default; // not in original
+$dark-preformatted: #ebdbb2 !default; // base06
+$dark-marked: #d65d0e !default; // base0f
+$dark-disabled: #111 !default; // not in original
+$dark-info: lightskyblue !default;
+$dark-warning: gold !default;
+$dark-error: orangered !default;
+$dark-success: springgreen !default;
+$dark-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
+                  0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
+                  0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
+                  0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
+                  0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
+                  0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
+                  0 0 0 0.0625rem rgba(0, 0, 0, 0.015);

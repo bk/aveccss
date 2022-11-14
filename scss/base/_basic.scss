@@ -1,0 +1,50 @@
+// Global css variables other than color theme and fonts
+// (for those, see _theme.scss and _fonts.scss which must be
+// processed BEFORE this file).
+:root {
+  // breakpoints
+  --bp-xs: #{$bp-xs};
+  --bp-sm: #{$bp-sm};
+  --bp-md: #{$bp-md};
+  --bp-lg: #{$bp-lg};
+  --bp-xl: #{$bp-xl};
+  // container widths/margins
+  --container-width: #{$container-width};
+  --container-max-width: #{$container-max-width};
+  --container-fixed-margin: #{$container-fixed-margin};
+  // spacing
+  --spacing: #{$spacing};
+  // standard border-radius
+  --border-radius: calc(var(--spacing) / 2); // 5px
+  // heading font sizes
+  --h1-size: #{$h1-size};
+  --h2-size: #{$h2-size};
+  --h3-size: #{$h3-size};
+  --h4-size: #{$h4-size};
+  --h5-size: #{$h5-size};
+  --h6-size: #{$h6-size};
+}
+
+// Make sure theme colors are actually applied!
+// (otherwise it would depend on what kind of element you're giving the class)
+
+.light-theme, .dark-theme, .reverse-theme {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+
+// Basic settings for html, body
+
+html {
+  font-family: var(--main-font);
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  background: var(--bg);
+  font-size: var(--font-size);
+  line-height: 1.5;
+  margin: 0;
+}

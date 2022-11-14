@@ -1,0 +1,40 @@
+// Table formatting
+
+table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow: auto;
+  width: 100%;
+  thead {
+      border-bottom: 3px solid var(--border);
+  }
+  tr:first-child th {
+    border-bottom: 3px solid var(--border);
+  }
+  th {
+    font-weight: bold;
+  }
+  td, th {
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    padding: .333rem;
+  }
+  tfoot {
+      border-top: 2px solid var(--border);
+  }
+  border-bottom: 3px solid var(--border);
+}
+
+table caption {
+  font-weight: bold;
+  margin-bottom: var(--spacing);
+}
+
+table.striped {
+  th {
+    background: var(--accent-bg);
+  }
+  tr:nth-child(even) {
+    background: var(--accent-bg);
+  }
+}

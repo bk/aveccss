@@ -1,0 +1,41 @@
+input:not([type=checkbox],[type=radio]),
+select:not([multiple]),
+textarea {
+  margin-bottom: var(--spacing);
+  width: 100%;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+  background-color: var(--disabled);
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
+textarea,
+select,
+input:not([type=checkbox],[type=radio]) {
+  font-size: inherit;
+  font-family: inherit;
+  padding: var(--spacing);
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: none;
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+// no border around file selector button
+input[type="file"] {
+  border: 0;
+}
+
+input::placeholder {
+  color: var(--text-light);
+}

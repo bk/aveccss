@@ -1,0 +1,15 @@
+// Breakpoints. Assumes mobile-first (up to $bp-xs).
+
+$bp-xs: 480px;
+$bp-sm: 768px;
+$bp-md: 960px;
+$bp-lg: 1280px;
+$bp-xl: 1600px;
+
+// Default width of container
+
+$container-width: 54rem;
+$container-max-width: 92%;
+
+// Setting for .container.fixed between sm and lg
+$container-fixed-margin: 25px;

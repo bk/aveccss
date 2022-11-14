@@ -1,0 +1,20 @@
+.stack {
+    margin-top: calc(var(--spacing) * 2);
+    margin-bottom: calc(var(--spacing) * 2);
+    > * {
+        display: block;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    > :not(:first-child) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+    }
+    > :not(:last-child) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: none;
+    }
+}

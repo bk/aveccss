@@ -1,0 +1,28 @@
+// Slimmed-down version of avecCSS.
+// - Without most layout features and utility classes.
+// - No forms settings except for buttons.
+
+@import "vars/fonts";
+@import "vars/breakpoints";
+@import "vars/themes/default";
+
+@import "base/normalize";
+@import "base/fonts";
+@import "base/theme";
+@import "base/basic";
+
+@import "layout/vars";
+@import "layout/basic";
+@import "layout/container";
+@import "layout/nav";
+@import "layout/img";
+
+@import "typography/headings";
+@import "typography/links";
+@import "typography/code";
+@import "typography/table";
+@import "typography/blockquote";
+@import "typography/lists";
+@import "typography/misc";
+
+@import "forms/buttons";

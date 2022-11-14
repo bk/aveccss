@@ -1,0 +1,229 @@
+// Simple auto-fit grid; equally sized columns, wrapping if
+// necessary given the width constraints.
+// For a more traditional column system, see _cols.scss.
+//
+// .grid is for 960px and up
+// .grid-sm is for 768px and up
+// .grid-xs is for all sizes.
+//
+// .cN is for column count from the smallest applicable brekpoint and up
+// .cN-(sm|md|lg|xl) indicates col count in that breakpoint
+//
+// Depends on _vars.scss.
+
+.grid > *, .grid-sm > * {
+    margin-bottom: var(--row-gap);
+}
+
+.grid, .grid-sm, .grid-xs {
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            Max(var(--grid-min-col-width), var(--grid-max-col-width)),
+            1fr));
+    grid-column-gap: var(--column-gap);
+    grid-row-gap: var(--row-gap);
+    &.nogap {
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+    }
+}
+
+.grid-xs {
+    --grid-min-col-width: 60px;
+    --grid-max-col-width: 60px;
+    display: grid;
+    &.c2 {
+        --grid-max-col-width: calc((100% - var(--column-gap)) / 2);
+    }
+    &.c3 {
+        --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
+    }
+    &.c4 {
+        --grid-max-col-width: calc((100% - calc(3 * var(--column-gap))) / 4);
+    }
+}
+@media (min-width: $bp-sm) {
+    .grid-xs, .grid-sm {
+        &.c2-sm {
+            --grid-max-col-width: calc((100% - var(--column-gap)) / 2);
+        }
+        &.c3-sm {
+            --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
+        }
+        &.c4-sm {
+            --grid-max-col-width: calc((100% - calc(3 * var(--column-gap))) / 4);
+        }
+        &.c5-sm {
+            --grid-max-col-width: calc((100% - calc(4 * var(--column-gap))) / 5);
+        }
+        &.c6-sm {
+            --grid-max-col-width: calc((100% - calc(5 * var(--column-gap))) / 6);
+        }
+    }
+    .grid-sm {
+        display: grid;
+        > * {
+            margin-bottom: 0;
+        }
+        &.c2 {
+            --grid-max-col-width: calc((100% - var(--column-gap)) / 2);
+        }
+        &.c3 {
+            --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
+        }
+        &.c4 {
+            --grid-max-col-width: calc((100% - calc(3 * var(--column-gap))) / 4);
+        }
+        &.c5 {
+            --grid-max-col-width: calc((100% - calc(4 * var(--column-gap))) / 5);
+        }
+        &.c6 {
+            --grid-max-col-width: calc((100% - calc(5 * var(--column-gap))) / 6);
+        }
+    }
+}
+@media (min-width: $bp-md) {
+    .grid-xs, .grid-sm {
+        &.c2-md {
+            --grid-max-col-width: calc((100% - var(--column-gap)) / 2);
+        }
+        &.c3-md {
+            --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
+        }
+        &.c4-md {
+            --grid-max-col-width: calc((100% - calc(3 * var(--column-gap))) / 4);
+        }
+        &.c5-md {
+            --grid-max-col-width: calc((100% - calc(4 * var(--column-gap))) / 5);
+        }
+        &.c6-md {
+            --grid-max-col-width: calc((100% - calc(5 * var(--column-gap))) / 6);
+        }
+        &.c7-md {
+            --grid-max-col-width: calc((100% - calc(6 * var(--column-gap))) / 7);
+        }
+        &.c8-md {
+            --grid-max-col-width: calc((100% - calc(7 * var(--column-gap))) / 8);
+        }
+        &.c9-md {
+            --grid-max-col-width: calc((100% - calc(8 * var(--column-gap))) / 9);
+        }
+        &.c10-md {
+            --grid-max-col-width: calc((100% - calc(9 * var(--column-gap))) / 10);
+        }
+        &.c11-md {
+            --grid-max-col-width: calc((100% - calc(10 * var(--column-gap))) / 11);
+        }
+        &.c12-md {
+            --grid-max-col-width: calc((100% - calc(11 * var(--column-gap))) / 12);
+        }
+    }
+    .grid {
+        display: grid;
+        > * {
+            margin-bottom: 0;
+        }
+        &.c2 {
+            --grid-max-col-width: calc((100% - var(--column-gap)) / 2);
+        }
+        &.c3 {
+            --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
+        }
+        &.c4 {
+            --grid-max-col-width: calc((100% - calc(3 * var(--column-gap))) / 4);
+        }
+        &.c5 {
+            --grid-max-col-width: calc((100% - calc(4 * var(--column-gap))) / 5);
+        }
+        &.c6 {
+            --grid-max-col-width: calc((100% - calc(5 * var(--column-gap))) / 6);
+        }
+        &.c7 {
+            --grid-max-col-width: calc((100% - calc(6 * var(--column-gap))) / 7);
+        }
+        &.c8 {
+            --grid-max-col-width: calc((100% - calc(7 * var(--column-gap))) / 8);
+        }
+        &.c9 {
+            --grid-max-col-width: calc((100% - calc(8 * var(--column-gap))) / 9);
+        }
+        &.c10 {
+            --grid-max-col-width: calc((100% - calc(9 * var(--column-gap))) / 10);
+        }
+        &.c11 {
+            --grid-max-col-width: calc((100% - calc(10 * var(--column-gap))) / 11);
+        }
+        &.c12 {
+            --grid-max-col-width: calc((100% - calc(11 * var(--column-gap))) / 12);
+        }
+    }
+}
+@media (min-width: $bp-lg) {
+    .grid, .grid-xs, .grid-sm {
+        &.c3-lg {
+            --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
+        }
+        &.c4-lg {
+            --grid-max-col-width: calc((100% - calc(3 * var(--column-gap))) / 4);
+        }
+        &.c5-lg {
+            --grid-max-col-width: calc((100% - calc(4 * var(--column-gap))) / 5);
+        }
+        &.c6-lg {
+            --grid-max-col-width: calc((100% - calc(5 * var(--column-gap))) / 6);
+        }
+        &.c7-lg {
+            --grid-max-col-width: calc((100% - calc(6 * var(--column-gap))) / 7);
+        }
+        &.c8-lg {
+            --grid-max-col-width: calc((100% - calc(7 * var(--column-gap))) / 8);
+        }
+        &.c9-lg {
+            --grid-max-col-width: calc((100% - calc(8 * var(--column-gap))) / 9);
+        }
+        &.c10-lg {
+            --grid-max-col-width: calc((100% - calc(9 * var(--column-gap))) / 10);
+        }
+        &.c11-lg {
+            --grid-max-col-width: calc((100% - calc(10 * var(--column-gap))) / 11);
+        }
+        &.c12-lg {
+            --grid-max-col-width: calc((100% - calc(11 * var(--column-gap))) / 12);
+        }
+    }
+}
+@media (min-width: $bp-xl) {
+    .grid, grid-xs, .grid-sm {
+        &.c3-xl {
+            --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
+        }
+        &.c4-xl {
+            --grid-max-col-width: calc((100% - calc(3 * var(--column-gap))) / 4);
+        }
+        &.c5-xl {
+            --grid-max-col-width: calc((100% - calc(4 * var(--column-gap))) / 5);
+        }
+        &.c6-xl {
+            --grid-max-col-width: calc((100% - calc(5 * var(--column-gap))) / 6);
+        }
+        &.c7-xl {
+            --grid-max-col-width: calc((100% - calc(6 * var(--column-gap))) / 7);
+        }
+        &.c8-xl {
+            --grid-max-col-width: calc((100% - calc(7 * var(--column-gap))) / 8);
+        }
+        &.c9-xl {
+            --grid-max-col-width: calc((100% - calc(8 * var(--column-gap))) / 9);
+        }
+        &.c10-xl {
+            --grid-max-col-width: calc((100% - calc(9 * var(--column-gap))) / 10);
+        }
+        &.c11-xl {
+            --grid-max-col-width: calc((100% - calc(10 * var(--column-gap))) / 11);
+        }
+        &.c12-xl {
+            --grid-max-col-width: calc((100% - calc(11 * var(--column-gap))) / 12);
+        }
+    }
+}

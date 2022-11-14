@@ -1,0 +1,126 @@
+:root, .light-theme {
+  // default light theme
+  --bg: #{$light-bg};
+  --card-bg: #{$light-card-bg};
+  --accent-bg: #{$light-accent-bg};
+  --contrast-bg: #{$light-contrast-bg};
+  --text: #{$light-text};
+  --text-light: #{$light-text-light};
+  --text-vivid: #{$light-text-vivid};
+  --text-heading: #{$light-text-heading};
+  --border: #{$light-border};
+  --accent: #{$light-accent};
+  --code: #{$light-code};
+  --preformatted: #{$light-preformatted};
+  --marked: #{$light-marked};
+  --disabled: #{$light-disabled};
+  --box-shadow: #{$light-box-shadow};
+  --info: #{$light-info};
+  --warning: #{$light-warning};
+  --error: #{$light-error};
+  --success: #{$light-success};
+}
+
+// Dark theme 
+// .reverse-theme switches to dark theme if light theme is in effect, and vice versa
+.dark-theme, .reverse-theme, .light-theme .reverse-theme {
+  --bg: #{$dark-bg};
+  --card-bg: #{$dark-card-bg};
+  --accent-bg: #{$dark-accent-bg};
+  --contrast-bg: #{$dark-contrast-bg};
+  --text: #{$dark-text};
+  --text-light: #{$dark-text-light};
+  --text-vivid: #{$dark-text-vivid};
+  --text-heading: #{$dark-text-heading};
+  --border: #{$dark-border};
+  --accent: #{$dark-accent};
+  --code: #{$dark-code};
+  --preformatted: #{$dark-preformatted};
+  --marked: #{$dark-marked};
+  --disabled: #{$dark-disabled};
+  --box-shadow: #{$dark-box-shadow};
+  --info: #{$dark-info};
+  --warning: #{$dark-warning};
+  --error: #{$dark-error};
+  --success: #{$dark-success};
+}
+
+@if $theme-auto-switch {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #{$dark-bg};
+      --card-bg: #{$dark-card-bg};
+      --accent-bg: #{$dark-accent-bg};
+      --contrast-bg: #{$dark-contrast-bg};
+      --text: #{$dark-text};
+      --text-light: #{$dark-text-light};
+      --text-vivid: #{$dark-text-vivid};
+      --text-heading: #{$dark-text-heading};
+      --border: #{$dark-border};
+      --accent: #{$dark-accent};
+      --code: #{$dark-code};
+      --preformatted: #{$dark-preformatted};
+      --disabled: #{$dark-disabled};
+      --box-shadow: #{$dark-box-shadow};
+      --info: #{$dark-info};
+      --warning: #{$dark-warning};
+      --error: #{$dark-error};
+      --success: #{$dark-success};
+    }
+    @if $dark-mode-antiglare {
+      img,
+      video {
+        opacity: 0.8;
+      }
+    }
+    .reverse-theme {
+      --bg: #{$light-bg};
+      --card-bg: #{$light-card-bg};
+      --accent-bg: #{$light-accent-bg};
+      --contrast-bg: #{$light-contrast-bg};
+      --text: #{$light-text};
+      --text-light: #{$light-text-light};
+      --text-vivid: #{$light-text-vivid};
+      --text-heading: #{$light-text-heading};
+      --border: #{$light-border};
+      --accent: #{$light-accent};
+      --code: #{$light-code};
+      --preformatted: #{$light-preformatted};
+      --marked: #{$light-marked};
+      --disabled: #{$light-disabled};
+      --box-shadow: #{$light-box-shadow};
+      --info: #{$light-info};
+      --warning: #{$light-warning};
+      --error: #{$light-error};
+      --success: #{$light-success};
+      @if $dark-mode-antiglare {
+        img,
+        video {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.dark-theme .reverse-theme {
+  --bg: #{$light-bg};
+  --card-bg: #{$light-card-bg};
+  --accent-bg: #{$light-accent-bg};
+  --contrast-bg: #{$light-contrast-bg};
+  --text: #{$light-text};
+  --text-light: #{$light-text-light};
+  --text-vivid: #{$light-text-vivid};
+  --text-heading: #{$light-text-heading};
+  --border: #{$light-border};
+  --accent: #{$light-accent};
+  --code: #{$light-code};
+  --preformatted: #{$light-preformatted};
+  --marked: #{$light-marked};
+  --disabled: #{$light-disabled};
+  --box-shadow: #{$light-box-shadow};
+  --info: #{$light-info};
+  --warning: #{$light-warning};
+  --error: #{$light-error};
+  --success: #{$light-success};
+}

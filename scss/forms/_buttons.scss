@@ -1,0 +1,45 @@
+button,
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  border: none;
+  border-radius: calc(var(--spacing) * 0.5);
+  background: var(--accent);
+  font-size: 1rem;
+  color: var(--button-text);
+  padding: var(--spacing) calc(var(--spacing) * 2);
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+a[role="button"] {
+  text-decoration: none;
+  color: var(--button-text);
+  display: inline-block;
+}
+
+button[disabled],
+[role="button"][aria-disabled="true"],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][disabled],
+select[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:focus,
+button:enabled:hover,
+[role="button"]:focus,
+[role="button"]:not([aria-disabled="true"]):hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover {
+  filter: brightness(1.4);
+  cursor: pointer;
+}

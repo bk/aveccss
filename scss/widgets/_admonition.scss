@@ -1,0 +1,34 @@
+// Assumes the following structure:
+// <div class="admonition (type)"><p class="admonition-title">...</p><p>...</p></div>
+// where type traditionally one of attention, caution, danger, error, hint,
+// important, note, tip warning, admonition. Added: success.
+
+.admonition {
+    --admonition: var(--info);
+    margin-top: calc(var(--spacing) * 2);
+    margin-bottom: calc(var(--spacing) * 2);
+    background: var(--accent-bg);
+    border-left: calc(var(--spacing) * 0.5) solid var(--admonition);
+    padding: calc(var(--spacing) * 2);
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+    > .admonition-title {
+        font-family: var(--heading-font);
+        font-size: calc(var(--font-size) * 1.125);
+        color: var(--admonition);
+        font-weight: bold;
+    }
+    &.caution, &.warning {
+        --admonition: var(--warning);
+    }
+    &.error, &.danger {
+        --admonition: var(--error);
+    }
+    &.success {
+        --admonition: var(--success);
+    }
+}

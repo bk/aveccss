@@ -1,0 +1,13 @@
+:root {
+  --main-font: #{$main-font};
+  --mono-font: #{$mono-font};
+  --sans-font: #{$sans-font};
+  --serif-font: #{$serif-font};
+  --heading-font: #{$heading-font};
+  --heading-weight: #{$heading-weight};
+  --font-size: #{$body-font-size}; // should be in rem
+  // No sass variables for the following; see overrides in theme-hooks
+  --button-text: var(--bg);
+  --mark-text: var(--text);
+  --code-bg: var(--accent-bg);
+}

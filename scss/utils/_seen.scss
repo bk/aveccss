@@ -1,0 +1,94 @@
+// .seen-xyz;
+// x=mobile, y=tablet+small desktop, z=normal+large desktop
+
+.seen-000, .seen-001, .seen-010, .seen-011, .hidden {
+    display: none !important;
+}
+.seen-111, .seen-100, .seen-101, .seen-110, .shown {
+    display: block !important;
+    &.inl {
+        display: inline-block !important;
+    }
+    &.tbl {
+        display: table !important;
+    }
+}
+@media (min-width: $bp-sm) { // 768px+
+    .seen-100, .seen-101 {
+        display: none !important;
+        &.inl, &tbl {
+            display: none !important;
+        }
+    }
+    .seen-010, .seen-011 {
+        display: block !important;
+        &.inl {
+            display: inline-block !important;
+        }
+        &.tbl {
+            display: table !important;
+        }
+    }
+}
+@media (min-width: $bp-lg ) { // 1280px+
+    .seen-100, .seen-010, .seen-110 {
+        display: none !important;
+        &.inl, &.tbl {
+            display: none !important;
+        }
+    }
+    .seen-001, .seen-101 {
+        display: block !important;
+        &.inl {
+            display: inline-block !important;
+        }
+        &.tbl {
+            display: table !important;
+        }
+    }
+}
+
+// .hidden-*
+
+@media (max-width: $bp-sm - 1px) { // seen-Xyz
+    .hidden-xs { display: none !important; }
+}
+@media (min-width: $bp-sm) and (max-width: $bp-md - 1px) { // seen-xYz
+    .hidden-sm,
+    .seen-010.hidden-sm,
+    .seen-011.hidden-sm,
+    .seen-110.hidden-sm {
+        display: none !important;
+    }
+}
+@media (min-width: $bp-md) and (max-width: $bp-lg - 1px) { // seen-xYz
+    .hidden-md,
+    .seen-010.hidden-md,
+    .seen-011.hidden-md,
+    .seen-110.hidden-md {
+        display: none !important;
+    }
+}
+@media (min-width: $bp-lg) and (max-width: $bp-xl - 1px) { // seen-xyZ
+    .hidden-lg,
+    .seen-001.hidden-lg,
+    .seen-011.hidden-lg,
+    .seen-101.hidden-lg {
+        display: none !important;
+    }
+}
+@media (min-width: $bp-xl) { // seen-xyZ
+    .hidden-xl,
+    .seen-001.hidden-xl,
+    .seen-011.hidden-xl,
+    .seen-101.hidden-xl {
+        display: none !important;
+    }
+}
+
+// NOTE:
+//   xs-only == seen-100
+//   sm-only == seen-010 hidden-md
+//   md-only == seen-010 hidden-sm
+//   lg-only == seen-001 hidden-xl
+//   xl-only == seen-001 hidden-lg

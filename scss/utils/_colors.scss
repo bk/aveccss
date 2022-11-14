@@ -1,0 +1,25 @@
+.bg-accent   { background: var(--accent-bg); }
+.bg-contrast { background: var(--contrast-bg); }
+.bg-marked   { background: var(--marked); }
+
+.text-vivid { color: var(--text-vivid); }
+.text-accent { color: var(--accent); }
+.text-muted { color: var(--text-light); }
+
+.bg-reverse  { background: var(--text); }
+.text-reverse  { color: var(--bg); }
+
+.bg-success { background: var(--success); }
+.text-success { color: var(--success); }
+
+.bg-warning { background: var(--warning); }
+.text-warning { color: var(--warning); }
+
+.bg-error { background: var(--error); }
+.text-error { color: var(--error); }
+
+.bg-info { background: var(--info); }
+.text-info { color: var(--info); }
+
+.bg-normal { background: var(--bg); }
+.text-normal { color: var(--text); }

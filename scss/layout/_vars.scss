@@ -1,0 +1,8 @@
+// Layout-related css variables.
+
+:root {
+    --grid-min-col-width: 120px;
+    --grid-max-col-width: 120px; // will be adjusted; see _grid.scss.
+    --column-gap: calc(var(--spacing) * 2);
+    --row-gap: calc(var(--spacing) * 2);
+}

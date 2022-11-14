@@ -1,0 +1,115 @@
+// The menu consists of three elements which must appear in order inside <nav>:
+//
+// (1) <input id="myid" type="checkbox" class="show-menu">
+// (2) <label for="myid" class="burger">(menu-marker)</label>
+// (3) <div class="menu">...</div> (may be another block element such as <ul>).
+//
+// 1 has an absolute position, width 0 and opacity 0.
+// 2 has a normal appearance until clicked, then it becomes the overlay for the page.
+// 3 is hidden by default by setting scaleX(0); then expanded by scaleX(1). It has position:fixed.
+//
+// To place a close button inside .menu, use <label for="myid">...</label>.
+// If you give this label a .close class, it will be absolutely positioned in the
+// top-right corner. A .has-close on the .menu will add spacing to make room for this.
+//
+// The menu marker can be created with <span class="menu-icon"></span>
+
+nav {
+    input[type="checkbox"].show-menu {
+        position: absolute;
+        width: 0;
+        opacity: 0;
+    }
+    label.burger {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .show-menu:checked ~ label.burger {
+        color: transparent;
+        width: 100%;
+        border-radius: 0;
+        background: Rgba(17,17,17,.8);
+        // transition: all .5s ease;
+        position: fixed;
+        min-height: 100%;
+        top: 0;
+        right: 0;
+        bottom: -1000em;
+        margin: 0;
+        transform: none;
+        box-shadow: inset 0 0 0 99em Rgb(17 17 17 / 40%);
+    }
+    .show-menu ~ .menu {
+        width: 85%;
+        max-width: 320px;
+        position: fixed;
+        z-index: 100;
+        min-height: 100%;
+        top: 0;
+        right: 0;
+        bottom: -1000em;
+        margin: 0;
+        background: var(--card-bg);
+        transform-origin: center right;
+        transition: all .25s ease;
+        transform: scaleX(0);
+        > * {
+            display: block;
+            margin: var(--spacing) calc(var(--spacing) * 2);
+            text-align: left;
+            max-width: calc(100% - calc(var(--spacing) * 4));
+        }
+    }
+    .show-menu:checked ~ .menu {
+        transform: scaleX(1);
+    }
+    .menu.has-close {
+        padding-top: calc(var(--spacing) * 3);
+    }
+    // assumes content such as &times;
+    .menu > label.close {
+        position: absolute;
+        top: var(--spacing);
+        right: calc(var(--spacing) * 1.5);
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--text-light);
+        line-height: 1;
+        &:hover {
+            color: var(--text);
+            cursor: pointer;
+        }
+    }
+}
+
+// Menu icon symbol
+.menu-icon.small {
+    transform: scale(0.75);
+}
+.menu-icon.large {
+    transform: scale(1.5);
+}
+.menu-icon.huge {
+    transform: scale(2);
+}
+.menu-icon, .menu-icon::after, .menu-icon::before {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    border-radius: 3px;
+    background: currentColor;
+}
+.menu-icon::after,
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+.menu-icon::before {
+    top: -6px;
+}
+.menu-icon::after {
+    top: 6px
+}

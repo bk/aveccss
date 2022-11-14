@@ -1,0 +1,36 @@
+// The main nav which typically should be in the header.
+// This rule was previously confined to `header > nav` but
+// it was changed for more flexibility.
+// TODO: support more nav types.
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1rem;
+  line-height: 2;
+  padding: 0 0 .3rem 0;
+  font-family: var(--heading-font);
+  > a {
+    margin: 0 calc(var(--spacing) * 2);
+  }
+  > ul, > ol {
+    align-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      padding: .1rem .7rem;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

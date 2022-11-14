@@ -1,0 +1,33 @@
+// Accordion (summary, details)
+
+details {
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+  font-weight: bold;
+  padding: var(--spacing) calc(var(--spacing) * 2);
+}
+
+details[open] {
+  padding: var(--spacing) calc(var(--spacing) * 2);
+}
+
+details[open] summary + * {
+  margin-top: 0;
+}
+
+details[open] summary {
+  margin-bottom: var(--spacing);
+  padding: 0;
+}
+
+details[open] > *:last-child {
+  margin-bottom: 0;
+}
+

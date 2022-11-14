@@ -1,0 +1,41 @@
+// Borders
+
+.ba-1, .ba-2, .ba-4,
+.bl-1, .bl-2, .bl-4,
+.br-1, .br-2, .br-4,
+.bt-1, .bt-2, .bt-4,
+.bb-1, .bb-2, .bb-4 {
+    border-color: var(--border);
+    border-style: solid;
+}
+
+.ba-0 { border-width: 0; }
+.ba-1 { border-width: 1px; }
+.ba-2 { border-width: 2px; }
+.ba-4 { border-width: 4px; }
+
+.bl-0 { border-left-width: 0; }
+.bl-1 { border-left-width: 1px; }
+.bl-2 { border-left-width: 2px; }
+.bl-4 { border-left-width: 4px; }
+
+.br-0 { border-right-width: 0; }
+.br-1 { border-right-width: 1px; }
+.br-2 { border-right-width: 2px; }
+.br-4 { border-right-width: 4px; }
+
+.bt-0 { border-top-width: 0; }
+.bt-1 { border-top-width: 1px; }
+.bt-2 { border-top-width: 2px; }
+.bt-4 { border-top-width: 4px; }
+
+.bb-0 { border-bottom-width: 0; }
+.bb-1 { border-bottom-width: 1px; }
+.bb-2 { border-bottom-width: 2px; }
+.bb-4 { border-bottom-width: 4px; }
+
+// Border-radius
+
+.borad { border-radius: var(--border-radius); }
+.borad-0 { border-radius: 0; }
+.borad-round { border-radius: 50%; }

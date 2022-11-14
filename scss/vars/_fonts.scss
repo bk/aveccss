@@ -1,0 +1,21 @@
+// Default fonts
+
+$sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif !default;
+$serif-font: "Source Serif", "PT Serif", "DejaVu Serif", Georgia, Charter, serif !default;
+$mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace !default;
+
+$main-font: $serif-font !default;
+$heading-font: $sans-font !default;
+$heading-weight: bold;
+
+// typographical rhythm
+$body-font-size: 1.125rem;
+$spacing: 0.625rem !default; // basic vertical spacing (normally 10px)
+$level-increase: 1.125 !default; // for headings
+
+$h6-size: 1rem !default;
+$h5-size: $h6-size * $level-increase;
+$h4-size: $h5-size * $level-increase;
+$h3-size: $h4-size * $level-increase + 0.125rem;
+$h2-size: $h3-size * $level-increase + 0.25rem;
+$h1-size: $h2-size * $level-increase + 0.375rem;

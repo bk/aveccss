@@ -1,0 +1,32 @@
+a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+//a:visited {
+//  color: inherit;
+//}
+
+a:hover {
+  text-decoration: none;
+}
+
+a.plain {
+  text-decoration: none;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+a.b {
+    font-weight: bold;
+}
+
+a.h {
+  font-family: var(--heading-font);
+}
+
+a.text {
+  color: var(--text-color);
+  text-decoration: none;
+}
+

@@ -1,0 +1,20 @@
+// Aside floats to the right if it is inside a p or div.
+// (In mobile, it does not float nor does it change width.)
+aside {
+  width: 30%;
+  padding: 0 var(--spacing);
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  font-size: calc(var(--font-size) * 0.9);
+}
+@media (min-width: $bp-sm) {
+  div, p {
+    aside {
+      width: 30%;
+      margin-left: var(--spacing);
+      float: right;
+    }
+  }
+}
+

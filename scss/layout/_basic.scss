@@ -1,0 +1,45 @@
+body {
+  display: flex; // mainly for footer placement
+  flex-direction: column;
+  min-height: 100vh;
+  > header {
+    background: var(--accent-bg);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  > main {
+    padding: 2rem 0 4rem 0;
+  }
+  > footer {
+    // make sure footer is at the bottom of the screen on short pages
+    margin-top: auto;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+}
+
+// NOTE: It is recommended to have a main element or a div.container
+// for the content of the page. The canonical (and expected) structure
+// is <header> + <main> + <footer> inside <body>.
+// This rule is merely a fallback to make extremely simple HTML documents with
+// very little structure look acceptable.
+
+body {
+    > div, > p, > blockquote,
+    > h1, > h2, > h3, > h4, > h5, > h6, > hgroup,
+    > ul, > ol, > dl,
+    > pre, > form, > figure,
+    > section, > article, > nav,
+    > address, > hr, > table {
+        width: var(--container-width);
+        max-width: var(--container-max-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    > div.container {
+        width: 100%;
+        max-width: 100%;
+    }
+}

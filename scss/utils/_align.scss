@@ -1,0 +1,17 @@
+// Text alignment
+.ta-l { text-align: left; }
+.ta-r { text-align: right; }
+.ta-c { text-align: center; }
+
+// Floating
+.fl-r {
+    float: right;
+    margin-left: var(--spacing);
+}
+.fl-l {
+    float: left;
+    margin-right: var(--spacing);
+}
+.cl-r { clear: right; }
+.cl-l { clear: left; }
+.clearfix { overflow: hidden; }

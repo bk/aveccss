@@ -1,0 +1,27 @@
+abbr {
+  cursor: help;
+}
+
+section {
+  margin: 3rem 0;
+}
+
+figcaption {
+  font-size: calc(var(--font-size) * 0.9);
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+hr {
+  margin: 1rem auto;
+  border: 0;
+  height: 1px;
+  background: var(--border);
+}
+
+// TODO: distinguish between --marked-bg and --marked-text
+mark {
+  padding: 2px 5px;
+  background: var(--marked);
+  color: var(--mark-text);
+}

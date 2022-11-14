@@ -1,0 +1,73 @@
+// Tabs without javascript. Up to 8 tabs are supported.
+// The markup is quite particular - the order of elements matters.
+//
+// <div class="tabs">
+//   <input type="radio" name="tabgroup" id="tab1" checked>
+//   <label for="tab1">Tab 1</label>
+//   <input type="radio" name="tabgroup" id="tab2">
+//   <label for="tab2">Tab 2</label>
+//   ...
+//   <div class="pane">Pane 1 (for #tab1)</div>
+//   <div class="pane">Pane 2 (for #tab2)</div>
+//   ...
+// </div>
+
+.tabs {
+    margin-top: var(--spacing);
+    margin-bottom: calc(var(--spacing) * 2);
+    background: var(--accent-bg);
+    > input[type=radio] { display: none; }
+    > label {
+        display: inline-block;
+        padding: calc(var(--spacing) * 0.75) calc(var(--spacing) * 1.5) calc(var(--spacing) * 0.75) calc(var(--spacing) * 1.5);
+        margin: 0;
+        color: var(--text-light);
+        font-weight: normal;
+        border: 1px solid transparent;
+        border-top-left-radius: calc(var(--spacing) * 0.5);
+        border-top-right-radius: calc(var(--spacing) * 0.5);
+        &:hover {
+            background: var(--contrast-bg);
+        }
+        position: relative;
+        top: 1px;
+    }
+    > :checked + label {
+        border: 1px solid var(--border);
+        border-bottom: 1px solid var(--bg);
+        border-top: 1px solid var(--border);
+        color: var(--text);
+        font-weight: bold;
+        background: var(--bg);
+    }
+    > .pane {
+        display: none;
+        background: var(--bg);
+        padding: var(--spacing) calc(var(--spacing) * 1.5);
+        border: 1px solid var(--border);
+    }
+    > input[type=radio]:nth-of-type(1):checked ~ .pane:nth-of-type(1) {
+        display: block;
+    }
+    > input[type=radio]:nth-of-type(2):checked ~ .pane:nth-of-type(2) {
+        display: block;
+    }
+    > input[type=radio]:nth-of-type(3):checked ~ .pane:nth-of-type(3) {
+        display: block;
+    }
+    > input[type=radio]:nth-of-type(4):checked ~ .pane:nth-of-type(4) {
+        display: block;
+    }
+    > input[type=radio]:nth-of-type(5):checked ~ .pane:nth-of-type(5) {
+        display: block;
+    }
+    > input[type=radio]:nth-of-type(6):checked ~ .pane:nth-of-type(6) {
+        display: block;
+    }
+    > input[type=radio]:nth-of-type(7):checked ~ .pane:nth-of-type(7) {
+        display: block;
+    }
+    > input[type=radio]:nth-of-type(8):checked ~ .pane:nth-of-type(8) {
+        display: block;
+    }
+}
