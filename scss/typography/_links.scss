@@ -1,6 +1,8 @@
 a {
   color: var(--accent);
   text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 8;
 }
 //a:visited {
 //  color: inherit;

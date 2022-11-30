@@ -38,7 +38,9 @@
 
 html {
   font-family: var(--main-font);
-  scroll-behavior: smooth;
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

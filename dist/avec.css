@@ -2,6 +2,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   box-sizing: border-box; }
 
 *, *:before, *:after {
@@ -286,9 +287,10 @@ th {
   color: var(--text); }
 
 html {
-  font-family: var(--main-font);
-  scroll-behavior: smooth; }
-
+  font-family: var(--main-font); }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth; } }
 body {
   color: var(--text);
   background: var(--bg);
@@ -321,7 +323,7 @@ body {
 
 body > div, body > p, body > blockquote,
 body > h1, body > h2, body > h3, body > h4, body > h5, body > h6, body > hgroup,
-body > ul, body > ol, body > dl,
+body > ul, body > ol, body > dl, body menu,
 body > pre, body > form, body > figure,
 body > section, body > article, body > nav,
 body > address, body > hr, body > table {
@@ -1219,7 +1221,9 @@ hgroup {
 
 a {
   color: var(--accent);
-  text-decoration: underline; }
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 8; }
 
 a:hover {
   text-decoration: none; }
