@@ -423,6 +423,29 @@ An accordion is just a `<details>` tag with slight variations from the default b
 </div>
 ```
 
+### Dropdown
+
+Dropdowns are also implemented as `<details>` but with a bit more special styling and with stricter requirements on the contents. The `<details>` must have `role="dropdown"` and the immediate children must be a `<summary>` and an `<ul>`, in that order. The appearance is somewhat similar to a `<select>`.
+
+
+```html
+<details role="dropdown">
+  <summary>Fruit dropdown</summary>
+  <ul>
+    <li><a href="#">Apple</a></li>
+    <li><a href="#">Orange</a></li>
+    ...
+  </ul>
+</details>
+```
+
+A dropdown placed in a Nav looks a bit different - more like a link and with tighter spacing.
+
+A dropdown can be made to look like a button by adding `role="button"` to the `<summary>` tag. If desired, the background color of the button can then be modified by adding a class attributes (e.g. `<summary role="dropdown" class="bg-error">`).
+
+The list shown by the dropdown is normally placed so that its left side aligns with the left side of the `<summary>`. You can change this to the right side by adding `class="rightset"` to the `<ul>`. (The difference between the two is not visible unless the list is broader than the dropdown button, since the minimum width is the same as the button).
+
+
 ## Utility classes
 
 ### Spacing
