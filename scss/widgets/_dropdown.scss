@@ -1,0 +1,91 @@
+// Dropdown: <details role="dropdown"> with <summary> and <ul> as direct children
+// (The HTML markup is very similar to PicoCSS' implementation)
+
+details[role="dropdown"] {
+    position: relative;
+    padding: var(--spacing);
+    margin-bottom: var(--spacing);
+    // summary = The label on the dropdown
+    > summary {
+        font-weight: inherit;
+        list-style-type: none;
+        margin: 0;
+        padding: 0 1.15em 0 0;
+        &::after {
+            position: absolute;
+            right: .75em;
+            content: "▼";
+        }
+        &[role="button"] {
+            margin: calc(var(--spacing) * -1);
+            padding: var(--spacing) calc(var(--spacing) * 3) var(--spacing) calc(var(--spacing) * 2);
+            line-height: 1.25;
+        }
+    }
+    &.active > summary {
+        font-weight: bold;
+    }
+    // ul = The list (normally, of links) in the dropdown
+    > ul {
+        position: absolute;
+        z-index: 99;
+        min-width: 100%;
+        top: auto;
+        left: 0;
+        &.rightset {
+            left: auto;
+            right: 0;
+        }
+        display: flex;
+        flex-direction: column;
+        margin: var(--spacing) 0 0 0;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: var(--border-radius);
+        background: var(--accent-bg);
+        box-shadow: var(--box-shadow);
+        > li {
+            margin: 0;
+            list-style: none;
+            padding: calc(var(--spacing) * 0.25) var(--spacing);
+            text-align: left;
+            white-space: nowrap;
+            &:hover, &.active {
+                background: var(--contrast-bg);
+            }
+            a {
+                text-decoration: none;
+            }
+            &:first-child {
+                padding-top: calc(var(--spacing) * 0.5);
+            }
+            &:last-child {
+                padding-bottom: calc(var(--spacing) * 0.5);
+            }
+        }
+    }
+}
+
+// Dropdowns will presumably be used primarily in nav bars.
+// In that context, they should look like links.
+nav details[role="dropdown"] {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--accent);
+    > summary {
+        &::after {
+            right: .15em;
+        }
+        &[role="button"] {
+            position: relative;
+            margin: 0;
+            &::after {
+                right: .75em;
+            }
+        }
+    }
+    > ul {
+        margin: 0;
+    }
+}

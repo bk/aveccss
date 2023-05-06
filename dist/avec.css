@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* AvecCSS v1.0 */
 html {
   -ms-text-size-adjust: 100%;
@@ -149,11 +150,11 @@ th {
   padding: 0; }
 
 :root {
-  --main-font: Source Serif, PT Serif, DejaVu Serif, Georgia, Charter, serif;
-  --mono-font: Consolas, Menlo, Monaco, Andale Mono, Ubuntu Mono, monospace;
-  --sans-font: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Nimbus Sans L, Roboto, Noto, Segoe UI, Arial, Helvetica, Helvetica Neue, sans-serif;
-  --serif-font: Source Serif, PT Serif, DejaVu Serif, Georgia, Charter, serif;
-  --heading-font: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Nimbus Sans L, Roboto, Noto, Segoe UI, Arial, Helvetica, Helvetica Neue, sans-serif;
+  --main-font: Charter, Bitstream Charter, Charis, Sitka Text, Cambria, serif;
+  --mono-font: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
+  --sans-font: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
+  --serif-font: Charter, Bitstream Charter, Charis, Sitka Text, Cambria, serif;
+  --heading-font: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
   --heading-weight: bold;
   --font-size: 1.125rem;
   --button-text: var(--bg);
@@ -1690,6 +1691,72 @@ details[open] summary {
 
 details[open] > *:last-child {
   margin-bottom: 0; }
+
+details[role="dropdown"] {
+  position: relative;
+  padding: var(--spacing);
+  margin-bottom: var(--spacing); }
+  details[role="dropdown"] > summary {
+    font-weight: inherit;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 1.15em 0 0; }
+    details[role="dropdown"] > summary::after {
+      position: absolute;
+      right: .75em;
+      content: "▼"; }
+    details[role="dropdown"] > summary[role="button"] {
+      margin: calc(var(--spacing) * -1);
+      padding: var(--spacing) calc(var(--spacing) * 3) var(--spacing) calc(var(--spacing) * 2);
+      line-height: 1.25; }
+  details[role="dropdown"].active > summary {
+    font-weight: bold; }
+  details[role="dropdown"] > ul {
+    position: absolute;
+    z-index: 99;
+    min-width: 100%;
+    top: auto;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing) 0 0 0;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    background: var(--accent-bg);
+    box-shadow: var(--box-shadow); }
+    details[role="dropdown"] > ul.rightset {
+      left: auto;
+      right: 0; }
+    details[role="dropdown"] > ul > li {
+      margin: 0;
+      list-style: none;
+      padding: calc(var(--spacing) * 0.25) var(--spacing);
+      text-align: left;
+      white-space: nowrap; }
+      details[role="dropdown"] > ul > li:hover, details[role="dropdown"] > ul > li.active {
+        background: var(--contrast-bg); }
+      details[role="dropdown"] > ul > li a {
+        text-decoration: none; }
+      details[role="dropdown"] > ul > li:first-child {
+        padding-top: calc(var(--spacing) * 0.5); }
+      details[role="dropdown"] > ul > li:last-child {
+        padding-bottom: calc(var(--spacing) * 0.5); }
+
+nav details[role="dropdown"] {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--accent); }
+  nav details[role="dropdown"] > summary::after {
+    right: .15em; }
+  nav details[role="dropdown"] > summary[role="button"] {
+    position: relative;
+    margin: 0; }
+    nav details[role="dropdown"] > summary[role="button"]::after {
+      right: .75em; }
+  nav details[role="dropdown"] > ul {
+    margin: 0; }
 
 .hero {
   background-color: rgba(0, 0, 0, 0.7);

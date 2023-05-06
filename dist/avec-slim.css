@@ -149,11 +149,11 @@ th {
   padding: 0; }
 
 :root {
-  --main-font: Source Serif, PT Serif, DejaVu Serif, Georgia, Charter, serif;
-  --mono-font: Consolas, Menlo, Monaco, Andale Mono, Ubuntu Mono, monospace;
-  --sans-font: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Nimbus Sans L, Roboto, Noto, Segoe UI, Arial, Helvetica, Helvetica Neue, sans-serif;
-  --serif-font: Source Serif, PT Serif, DejaVu Serif, Georgia, Charter, serif;
-  --heading-font: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Nimbus Sans L, Roboto, Noto, Segoe UI, Arial, Helvetica, Helvetica Neue, sans-serif;
+  --main-font: Charter, Bitstream Charter, Charis, Sitka Text, Cambria, serif;
+  --mono-font: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
+  --sans-font: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
+  --serif-font: Charter, Bitstream Charter, Charis, Sitka Text, Cambria, serif;
+  --heading-font: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
   --heading-weight: bold;
   --font-size: 1.125rem;
   --button-text: var(--bg);
