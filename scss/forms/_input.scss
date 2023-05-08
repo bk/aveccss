@@ -18,7 +18,7 @@ input[type="range"] {
 
 textarea,
 select,
-input:not([type=checkbox],[type=radio]) {
+input:not([type=checkbox],[type=radio],[type=submit],[type=reset]) {
   font-size: inherit;
   font-family: inherit;
   padding: var(--spacing);
