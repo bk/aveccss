@@ -10,11 +10,13 @@ details[role="dropdown"] {
         font-weight: inherit;
         list-style-type: none;
         margin: 0;
-        padding: 0 1.15em 0 0;
+        padding: 0 1.15rem 0 0;
         &::after {
             position: absolute;
-            right: .75em;
+            right: .75rem;
             content: "▼";
+            font-size: .75em;
+            margin-top: .33em;
         }
         &[role="button"] {
             margin: calc(var(--spacing) * -1);
@@ -72,16 +74,17 @@ nav details[role="dropdown"] {
     margin: 0;
     padding: 0;
     background: transparent;
+    border: none;
     color: var(--accent);
     > summary {
         &::after {
-            right: .15em;
+            right: .15rem;
         }
         &[role="button"] {
             position: relative;
             margin: 0;
             &::after {
-                right: .75em;
+                right: .75rem;
             }
         }
     }
