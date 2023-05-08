@@ -1220,29 +1220,25 @@ hgroup {
   hgroup > h2 + *:last-child {
     font-size: calc(var(--font-size) * 1.125); }
 
-a {
+a, [role="link"] {
   color: var(--accent);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 8; }
-
-a:hover {
-  text-decoration: none; }
-
-a.plain {
-  text-decoration: none; }
-  a.plain:hover {
-    opacity: .7; }
-
-a.b {
-  font-weight: bold; }
-
-a.h {
-  font-family: var(--heading-font); }
-
-a.text {
-  color: var(--text-color);
-  text-decoration: none; }
+  text-decoration-thickness: 8;
+  cursor: pointer; }
+  a:hover, [role="link"]:hover {
+    text-decoration: none; }
+  a.plain, [role="link"].plain {
+    text-decoration: none; }
+    a.plain:hover, [role="link"].plain:hover {
+      opacity: .7; }
+  a.b, [role="link"].b {
+    font-weight: bold; }
+  a.h, [role="link"].h {
+    font-family: var(--heading-font); }
+  a.text, [role="link"].text {
+    color: var(--text-color);
+    text-decoration: none; }
 
 code,
 pre,
@@ -1412,7 +1408,7 @@ input[type="range"] {
 
 textarea,
 select,
-input:not([type=checkbox], [type=radio]) {
+input:not([type=checkbox], [type=radio], [type=submit], [type=reset]) {
   font-size: inherit;
   font-family: inherit;
   padding: var(--spacing);
@@ -1700,11 +1696,13 @@ details[role="dropdown"] {
     font-weight: inherit;
     list-style-type: none;
     margin: 0;
-    padding: 0 1.15em 0 0; }
+    padding: 0 1.15rem 0 0; }
     details[role="dropdown"] > summary::after {
       position: absolute;
-      right: .75em;
-      content: "▼"; }
+      right: .75rem;
+      content: "▼";
+      font-size: .75em;
+      margin-top: .33em; }
     details[role="dropdown"] > summary[role="button"] {
       margin: calc(var(--spacing) * -1);
       padding: var(--spacing) calc(var(--spacing) * 3) var(--spacing) calc(var(--spacing) * 2);
@@ -1747,14 +1745,15 @@ nav details[role="dropdown"] {
   margin: 0;
   padding: 0;
   background: transparent;
+  border: none;
   color: var(--accent); }
   nav details[role="dropdown"] > summary::after {
-    right: .15em; }
+    right: .15rem; }
   nav details[role="dropdown"] > summary[role="button"] {
     position: relative;
     margin: 0; }
     nav details[role="dropdown"] > summary[role="button"]::after {
-      right: .75em; }
+      right: .75rem; }
   nav details[role="dropdown"] > ul {
     margin: 0; }
 
@@ -1911,6 +1910,9 @@ nav details[role="dropdown"] {
 .w100 {
   width: 100%; }
 
+.wa {
+  width: auto !important; }
+
 @media (min-width: 768px) {
   .w0-sm {
     width: 0; }
@@ -1927,7 +1929,9 @@ nav details[role="dropdown"] {
   .w50-sm {
     width: 50%; }
   .w100-sm {
-    width: 100%; } }
+    width: 100%; }
+  .wa-sm {
+    width: auto !important; } }
 
 @media (min-width: 960px) {
   .w0-md {
@@ -1945,7 +1949,9 @@ nav details[role="dropdown"] {
   .w50-md {
     width: 50%; }
   .w100-md {
-    width: 100%; } }
+    width: 100%; }
+  .wa-md {
+    width: auto !important; } }
 
 @media (min-width: 1280px) {
   .w0-lg {
@@ -1963,7 +1969,9 @@ nav details[role="dropdown"] {
   .w50-lg {
     width: 50%; }
   .w100-lg {
-    width: 100%; } }
+    width: 100%; }
+  .wa-lg {
+    width: auto !important; } }
 
 @media (min-width: 1600px) {
   .w0-xl {
@@ -1981,7 +1989,9 @@ nav details[role="dropdown"] {
   .w50-xl {
     width: 50%; }
   .w100-xl {
-    width: 100%; } }
+    width: 100%; }
+  .wa-xl {
+    width: auto !important; } }
 
 .m-0 {
   margin: 0 !important; }

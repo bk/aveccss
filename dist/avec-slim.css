@@ -497,29 +497,25 @@ hgroup {
   hgroup > h2 + *:last-child {
     font-size: calc(var(--font-size) * 1.125); }
 
-a {
+a, [role="link"] {
   color: var(--accent);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 8; }
-
-a:hover {
-  text-decoration: none; }
-
-a.plain {
-  text-decoration: none; }
-  a.plain:hover {
-    opacity: .7; }
-
-a.b {
-  font-weight: bold; }
-
-a.h {
-  font-family: var(--heading-font); }
-
-a.text {
-  color: var(--text-color);
-  text-decoration: none; }
+  text-decoration-thickness: 8;
+  cursor: pointer; }
+  a:hover, [role="link"]:hover {
+    text-decoration: none; }
+  a.plain, [role="link"].plain {
+    text-decoration: none; }
+    a.plain:hover, [role="link"].plain:hover {
+      opacity: .7; }
+  a.b, [role="link"].b {
+    font-weight: bold; }
+  a.h, [role="link"].h {
+    font-family: var(--heading-font); }
+  a.text, [role="link"].text {
+    color: var(--text-color);
+    text-decoration: none; }
 
 code,
 pre,
