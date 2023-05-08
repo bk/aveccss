@@ -1,34 +1,29 @@
-a {
+a, [role="link"] {
   color: var(--accent);
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 8;
-}
-//a:visited {
-//  color: inherit;
-//}
-
-a:hover {
-  text-decoration: none;
-}
-
-a.plain {
-  text-decoration: none;
+  cursor: pointer;
   &:hover {
-    opacity: .7;
+    text-decoration: none;
+  }
+  //&:visited {
+  //  color: inherit;
+  //}
+  &.plain {
+    text-decoration: none;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &.b {
+    font-weight: bold;
+  }
+  &.h {
+    font-family: var(--heading-font);
+  }
+  &.text {
+    color: var(--text-color);
+    text-decoration: none;
   }
 }
-
-a.b {
-    font-weight: bold;
-}
-
-a.h {
-  font-family: var(--heading-font);
-}
-
-a.text {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
