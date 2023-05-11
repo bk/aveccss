@@ -180,7 +180,10 @@ th {
   --info: mediumblue;
   --warning: darkorange;
   --error: firebrick;
-  --success: forestgreen; }
+  --success: forestgreen;
+  --button-text: var(--bg);
+  --mark-text: var(--text);
+  --code-bg: var(--accent-bg); }
 
 .dark-theme, .reverse-theme, .light-theme .reverse-theme {
   --bg: #212121;
@@ -201,7 +204,10 @@ th {
   --info: lightskyblue;
   --warning: gold;
   --error: orangered;
-  --success: springgreen; }
+  --success: springgreen;
+  --button-text: var(--bg);
+  --mark-text: var(--text);
+  --code-bg: var(--accent-bg); }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -222,7 +228,10 @@ th {
     --info: lightskyblue;
     --warning: gold;
     --error: orangered;
-    --success: springgreen; }
+    --success: springgreen;
+    --button-text: var(--bg);
+    --mark-text: var(--text);
+    --code-bg: var(--accent-bg); }
   .reverse-theme {
     --bg: #f5f5f5;
     --card-bg: #ffffff;
@@ -242,7 +251,10 @@ th {
     --info: mediumblue;
     --warning: darkorange;
     --error: firebrick;
-    --success: forestgreen; } }
+    --success: forestgreen;
+    --button-text: var(--bg);
+    --mark-text: var(--text);
+    --code-bg: var(--accent-bg); } }
 
 .dark-theme .reverse-theme {
   --bg: #f5f5f5;
@@ -263,7 +275,10 @@ th {
   --info: mediumblue;
   --warning: darkorange;
   --error: firebrick;
-  --success: forestgreen; }
+  --success: forestgreen;
+  --button-text: var(--bg);
+  --mark-text: var(--text);
+  --code-bg: var(--accent-bg); }
 
 :root {
   --bp-xs: 480px;
@@ -1707,6 +1722,8 @@ details[role="dropdown"] {
       margin: calc(var(--spacing) * -1);
       padding: var(--spacing) calc(var(--spacing) * 3) var(--spacing) calc(var(--spacing) * 2);
       line-height: 1.25; }
+    details[role="dropdown"] > summary::-webkit-details-marker {
+      display: none; }
   details[role="dropdown"].active > summary {
     font-weight: bold; }
   details[role="dropdown"] > ul {

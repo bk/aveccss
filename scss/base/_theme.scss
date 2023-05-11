@@ -19,6 +19,10 @@
   --warning: #{$light-warning};
   --error: #{$light-error};
   --success: #{$light-success};
+  // Firefox wants this to be redefined, Chrome/Safari don't care
+  --button-text: var(--bg);
+  --mark-text: var(--text);
+  --code-bg: var(--accent-bg);
 }
 
 // Dark theme 
@@ -43,6 +47,10 @@
   --warning: #{$dark-warning};
   --error: #{$dark-error};
   --success: #{$dark-success};
+  // Firefox wants this to be redefined, Chrome/Safari don't care
+  --button-text: var(--bg);
+  --mark-text: var(--text);
+  --code-bg: var(--accent-bg);
 }
 
 @if $theme-auto-switch {
@@ -66,6 +74,10 @@
       --warning: #{$dark-warning};
       --error: #{$dark-error};
       --success: #{$dark-success};
+      // Firefox wants this to be redefined, Chrome/Safari don't care
+      --button-text: var(--bg);
+      --mark-text: var(--text);
+      --code-bg: var(--accent-bg);
     }
     @if $dark-mode-antiglare {
       img,
@@ -93,6 +105,10 @@
       --warning: #{$light-warning};
       --error: #{$light-error};
       --success: #{$light-success};
+      // Firefox wants this to be redefined, Chrome/Safari don't care
+      --button-text: var(--bg);
+      --mark-text: var(--text);
+      --code-bg: var(--accent-bg);
       @if $dark-mode-antiglare {
         img,
         video {
@@ -123,4 +139,8 @@
   --warning: #{$light-warning};
   --error: #{$light-error};
   --success: #{$light-success};
+  // Firefox wants this to be redefined, Chrome/Safari don't care
+  --button-text: var(--bg);
+  --mark-text: var(--text);
+  --code-bg: var(--accent-bg);
 }

@@ -23,6 +23,11 @@ details[role="dropdown"] {
             padding: var(--spacing) calc(var(--spacing) * 3) var(--spacing) calc(var(--spacing) * 2);
             line-height: 1.25;
         }
+        // list-style-type:none should remove the marker in front,
+        // but it does not work on Webkit browsers
+        &::-webkit-details-marker {
+            display: none;
+        }
     }
     &.active > summary {
         font-weight: bold;
