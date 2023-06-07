@@ -1,4 +1,28 @@
 // Display
 .d-block { display: block; }
 .d-inl { display: inline-block; width: auto; }
+.d-flex { display: flex; }
 
+@media (min-width: $bp-sm) {
+    .d-block-sm { display: block; }
+    .d-inl-sm { display: inline-block; }
+    .d-flex-sm { display: flex; }
+}
+
+@media (min-width: $bp-md) {
+    .d-block-md { display: block; }
+    .d-inl-md { display: inline-block; }
+    .d-flex-md { display: flex; }
+}
+
+@media (min-width: $bp-lg) {
+    .d-block-lg { display: block; }
+    .d-inl-lg { display: inline-block; }
+    .d-flex-lg { display: flex; }
+}
+
+@media (min-width: $bp-xl) {
+    .d-block-xl { display: block; }
+    .d-inl-xl { display: inline-block; }
+    .d-flex-xl { display: flex; }
+}

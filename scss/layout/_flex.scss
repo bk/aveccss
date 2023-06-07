@@ -1,0 +1,62 @@
+// Not a layout system per se, but utilities which can be used to arrange
+// elements in a flex container (.d-flex) and thus build a kind of layout.
+//
+// Note that since gap support for flexbox is rather recent, it is better to use
+// negative margins on the container if you want to align with normal content
+// without using .f-jc-between
+
+// (1) "Normal" classes for container (which also has .d-flex or equivalent)
+
+.f-dir-row { flex-direction: row; }
+.f-dir-col { flex-direction: column; }
+
+.f-wrap { flex-wrap: wrap; }
+.f-nowrap { flex-wrap: nowrap; }
+
+// arrange along main axis
+.f-jc-start { justify-content: flex-start; }
+.f-jc-end { justify-content: flex-end; }
+.f-jc-center { justify-content: center; }
+.f-jc-between { justify-content: space-between; }
+.f-jc-around { justify-content: space-around; }
+.f-jc-evenly { justify-content: space-evenly; }
+
+// align along cross axis (note that there are no classes for align-content)
+.f-alit-start { align-items: flex-start; }
+.f-alit-end { align-items: flex-end; }
+.f-alit-center { align-items: center; }
+.f-alit-base { align-items: baseline; }
+.f-alit-stretch { align-items: stretch; }
+
+// (2) Classes for container which affect children:
+
+// flex value for the children; the default is grow=0 shrink=1 basis=auto.
+.fc-01a > * { flex: 0 1 auto; } // the default; good for items of fixed size
+.fc-00a > * { flex: 0 0 auto; }
+.fc-000 > * { flex: 0 0 0; }
+.fc-01a > * { flex: 0 1 auto; }
+.fc-010 > * { flex: 0 1 0; }
+.fc-100 > * { flex: 1 0 0; } // free space distributed to make items the same size
+.fc-11a > * { flex: 1 1 auto; } // free space evenly to items regardless of size
+
+// Automatic padding for children based on negative
+// margins of container (to "emulate" gap setting)
+.d-flex.m-neg-1 > * { padding: var(--spacing); }
+.d-flex.m-neg-2 > * { padding: calc(var(--spacing) * 2); }
+
+// (3) Classes for flex items -- see also _order.scss
+
+.grow-0 { flex-grow: 0 !important; }
+.grow-1 { flex-grow: 1 !important; }
+.grow-2 { flex-grow: 2 !important; }
+.grow-3 { flex-grow: 3 !important; }
+
+.basis-a { flex-basis: auto !important; }
+.basis-0 { flex-basis: 0 !important; }
+.basis-fill { flex-basis: 100% !important; }
+
+.als-start { align-self: flex-start; }
+.als-end { align-self: flex-end; }
+.als-center { align-self: flex-center; }
+.als-base { align-self: baseline; }
+.als-stretch { align-self: stretch; }

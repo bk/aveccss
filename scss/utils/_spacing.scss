@@ -49,6 +49,29 @@
 
 .mx-a { margin-left: auto !important; margin-right: auto !important; }
 
+// Negative margins (limited set: 1, 2, 4)
+
+.m-neg-1 { margin: calc(var(--spacing) * -1) !important }
+.m-neg-2 { margin: calc(var(--spacing) * -2) !important }
+.m-neg-4 { margin: calc(var(--spacing) * -4) !important }
+
+.mt-neg-1 { margin-top: calc(var(--spacing) * -1) !important }
+.mt-neg-2 { margin-top: calc(var(--spacing) * -2) !important }
+.mt-neg-4 { margin-top: calc(var(--spacing) * -4) !important }
+
+.mb-neg-1 { margin-bottom: calc(var(--spacing) * -1) !important }
+.mb-neg-2 { margin-bottom: calc(var(--spacing) * -2) !important }
+.mb-neg-4 { margin-bottom: calc(var(--spacing) * -4) !important }
+
+.ml-neg-1 { margin-left: calc(var(--spacing) * -1) !important }
+.ml-neg-2 { margin-left: calc(var(--spacing) * -2) !important }
+.ml-neg-4 { margin-left: calc(var(--spacing) * -4) !important }
+
+.mr-neg-1 { margin-right: calc(var(--spacing) * -1) !important }
+.mr-neg-2 { margin-right: calc(var(--spacing) * -2) !important }
+.mr-neg-4 { margin-right: calc(var(--spacing) * -4) !important }
+
+
 // Padding
 
 .p-0 { padding: 0 !important; }

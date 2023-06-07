@@ -1,5 +1,6 @@
 // .seen-xyz;
 // x=mobile, y=tablet+small desktop, z=normal+large desktop
+// Auxiliary classes: .inl, .tbl, .flx
 
 .seen-000, .seen-001, .seen-010, .seen-011, .hidden {
     display: none !important;
@@ -11,6 +12,9 @@
     }
     &.tbl {
         display: table !important;
+    }
+    &.flx {
+        display: flex !important;
     }
 }
 @media (min-width: $bp-sm) { // 768px+
@@ -28,12 +32,15 @@
         &.tbl {
             display: table !important;
         }
+        &.flx {
+            display: flex !important;
+        }
     }
 }
 @media (min-width: $bp-lg ) { // 1280px+
     .seen-100, .seen-010, .seen-110 {
         display: none !important;
-        &.inl, &.tbl {
+        &.inl, &.tbl, &.flx {
             display: none !important;
         }
     }
@@ -44,6 +51,9 @@
         }
         &.tbl {
             display: table !important;
+        }
+        &.flx {
+            display: flex !important;
         }
     }
 }
