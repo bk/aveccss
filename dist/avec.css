@@ -2596,6 +2596,12 @@ nav details[role="dropdown"] {
   padding: 0;
   overflow-x: auto; }
 
+.bg-normal {
+  background: var(--bg); }
+
+.text-normal {
+  color: var(--text); }
+
 .bg-accent {
   background: var(--accent-bg); }
 
@@ -2604,6 +2610,9 @@ nav details[role="dropdown"] {
 
 .bg-marked {
   background: var(--marked); }
+
+.bg-card {
+  background: var(--card-bg); }
 
 .text-vivid {
   color: var(--text-vivid); }
@@ -2643,12 +2652,6 @@ nav details[role="dropdown"] {
 
 .text-info {
   color: var(--info); }
-
-.bg-normal {
-  background: var(--bg); }
-
-.text-normal {
-  color: var(--text); }
 
 .larger {
   font-size: larger; }
