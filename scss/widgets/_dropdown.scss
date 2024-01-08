@@ -1,7 +1,9 @@
-// Dropdown: <details role="dropdown"> with <summary> and <ul> as direct children
+// Dropdown: <details role="menu"> with <summary> and <ul> as direct children
 // (The HTML markup is very similar to PicoCSS' implementation)
+// For backward compatibility, role="dropdown" is also supported although that
+// is not on the list of valid ARIA role names.
 
-details[role="dropdown"] {
+details[role="dropdown"], details[role="menu"] {
     position: relative;
     padding: var(--spacing);
     margin-bottom: var(--spacing);
@@ -75,7 +77,8 @@ details[role="dropdown"] {
 
 // Dropdowns will presumably be used primarily in nav bars.
 // In that context, they should look like links.
-nav details[role="dropdown"] {
+nav details[role="dropdown"],
+nav details[role="menu"] {
     margin: 0;
     padding: 0;
     background: transparent;
