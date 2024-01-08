@@ -1811,30 +1811,30 @@ details[open] summary {
 details[open] > *:last-child {
   margin-bottom: 0; }
 
-details[role="dropdown"] {
+details[role="dropdown"], details[role="menu"] {
   position: relative;
   padding: var(--spacing);
   margin-bottom: var(--spacing); }
-  details[role="dropdown"] > summary {
+  details[role="dropdown"] > summary, details[role="menu"] > summary {
     font-weight: inherit;
     list-style-type: none;
     margin: 0;
     padding: 0 1.15rem 0 0; }
-    details[role="dropdown"] > summary::after {
+    details[role="dropdown"] > summary::after, details[role="menu"] > summary::after {
       position: absolute;
       right: .75rem;
       content: "▼";
       font-size: .75em;
       margin-top: .33em; }
-    details[role="dropdown"] > summary[role="button"] {
+    details[role="dropdown"] > summary[role="button"], details[role="menu"] > summary[role="button"] {
       margin: calc(var(--spacing) * -1);
       padding: var(--spacing) calc(var(--spacing) * 3) var(--spacing) calc(var(--spacing) * 2);
       line-height: 1.25; }
-    details[role="dropdown"] > summary::-webkit-details-marker {
+    details[role="dropdown"] > summary::-webkit-details-marker, details[role="menu"] > summary::-webkit-details-marker {
       display: none; }
-  details[role="dropdown"].active > summary {
+  details[role="dropdown"].active > summary, details[role="menu"].active > summary {
     font-weight: bold; }
-  details[role="dropdown"] > ul {
+  details[role="dropdown"] > ul, details[role="menu"] > ul {
     position: absolute;
     z-index: 99;
     min-width: 100%;
@@ -1848,38 +1848,43 @@ details[role="dropdown"] {
     border-radius: var(--border-radius);
     background: var(--accent-bg);
     box-shadow: var(--box-shadow); }
-    details[role="dropdown"] > ul.rightset {
+    details[role="dropdown"] > ul.rightset, details[role="menu"] > ul.rightset {
       left: auto;
       right: 0; }
-    details[role="dropdown"] > ul > li {
+    details[role="dropdown"] > ul > li, details[role="menu"] > ul > li {
       margin: 0;
       list-style: none;
       padding: calc(var(--spacing) * 0.25) var(--spacing);
       text-align: left;
       white-space: nowrap; }
-      details[role="dropdown"] > ul > li:hover, details[role="dropdown"] > ul > li.active {
+      details[role="dropdown"] > ul > li:hover, details[role="dropdown"] > ul > li.active, details[role="menu"] > ul > li:hover, details[role="menu"] > ul > li.active {
         background: var(--contrast-bg); }
-      details[role="dropdown"] > ul > li a {
+      details[role="dropdown"] > ul > li a, details[role="menu"] > ul > li a {
         text-decoration: none; }
-      details[role="dropdown"] > ul > li:first-child {
+      details[role="dropdown"] > ul > li:first-child, details[role="menu"] > ul > li:first-child {
         padding-top: calc(var(--spacing) * 0.5); }
-      details[role="dropdown"] > ul > li:last-child {
+      details[role="dropdown"] > ul > li:last-child, details[role="menu"] > ul > li:last-child {
         padding-bottom: calc(var(--spacing) * 0.5); }
 
-nav details[role="dropdown"] {
+nav details[role="dropdown"],
+nav details[role="menu"] {
   margin: 0;
   padding: 0;
   background: transparent;
   border: none;
   color: var(--accent); }
-  nav details[role="dropdown"] > summary::after {
+  nav details[role="dropdown"] > summary::after,
+  nav details[role="menu"] > summary::after {
     right: .15rem; }
-  nav details[role="dropdown"] > summary[role="button"] {
+  nav details[role="dropdown"] > summary[role="button"],
+  nav details[role="menu"] > summary[role="button"] {
     position: relative;
     margin: 0; }
-    nav details[role="dropdown"] > summary[role="button"]::after {
+    nav details[role="dropdown"] > summary[role="button"]::after,
+    nav details[role="menu"] > summary[role="button"]::after {
       right: .75rem; }
-  nav details[role="dropdown"] > ul {
+  nav details[role="dropdown"] > ul,
+  nav details[role="menu"] > ul {
     margin: 0; }
 
 .hero {
@@ -1937,6 +1942,35 @@ nav details[role="dropdown"] {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: none; }
+
+.badge {
+  position: relative; }
+  .badge::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%); }
+  .badge[data-badge]::after {
+    font-size: .8rem;
+    line-height: 1;
+    min-width: 1rem;
+    min-height: 1rem;
+    padding: 0.2rem 0.4rem;
+    text-align: center;
+    white-space: nowrap;
+    background: var(--accent);
+    background-clip: padding-box;
+    border-radius: .8rem;
+    box-shadow: 0 0 0 0.15rem var(--button-text);
+    color: var(--button-text);
+    content: attr(data-badge);
+    display: inline-block; }
+  .badge[data-badge=""]::after {
+    height: .5rem;
+    width: .5rem;
+    min-width: .5rem;
+    min-height: .5rem;
+    padding: 0; }
 
 .seen-000, .seen-001, .seen-010, .seen-011, .hidden {
   display: none !important; }

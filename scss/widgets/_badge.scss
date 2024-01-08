@@ -1,0 +1,35 @@
+// Badges, based on the Spectre implementation.
+// Usage: <button class="badge" data-badge="123">...</button>
+
+.badge {
+    position: relative;
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(50%,-50%);
+    }
+    &[data-badge]::after {
+        font-size: .8rem;
+        line-height: 1;
+        min-width: 1rem;
+        min-height: 1rem;
+        padding: 0.2rem 0.4rem;
+        text-align: center;
+        white-space: nowrap;
+        background: var(--accent);
+        background-clip: padding-box;
+        border-radius: .8rem;
+        box-shadow: 0 0 0 0.15rem var(--button-text);
+        color: var(--button-text);
+        content: attr(data-badge);
+        display: inline-block;
+    }
+    &[data-badge=""]::after {
+        height: .5rem;
+        width: .5rem;
+        min-width: .5rem;
+        min-height: .5rem;
+        padding: 0;
+    }
+}
