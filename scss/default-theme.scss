@@ -1,3 +1,13 @@
 /* AvecCSS v1.1 - default theme */
 @import "vars/themes/default";
 @import "base/theme";
+
+
+button,
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+a[role="button"] {
+    font-family: var(--sans-font);
+}

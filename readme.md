@@ -453,7 +453,7 @@ often a button, a tab or a navigation item. The value for the badge is given wit
 An empty `data-badge` leads to a badge that is a small dot.
 
 <div class="mb-2">
-<button class="badge mr-1" data-badge="917">First</button>
+  * [ ] <button class="badge mr-1" data-badge="917">First</button>
 <button class="badge mr-1" data-badge="">Second</button>
 <button class="badge" data-badge="✓">Third</button>
 </div>
@@ -532,6 +532,8 @@ Foreground or text color can be set with the following classes: `text-vivid`, `t
 Background color can be set with the following classes: `bg-accent`, `bg-contrast`, `bg-marked`, `bg-reverse`, `bg-success`, `bg-warning`, `bg-error`, `bg-info`, `bg-normal`.
 
 The colors which are applied are from the active theme. They are registered in CSS variables which mostly have names similar to the class names.
+
+An outline button style can be turned on by adding the class `outline` to buttons and button-like elements. The foreground and border color on such buttons can be controlled with the additional classes `success`, `error`, `warning`, `info`, or `plain`. The last of these gives the button the default text foreground color.
 
 ### Alignment
 

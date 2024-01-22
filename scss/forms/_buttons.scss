@@ -43,3 +43,37 @@ input[type="button"]:enabled:hover {
   filter: brightness(1.4);
   cursor: pointer;
 }
+
+button,
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+a[role="button"] {
+  &.outline {
+    color: var(--accent);
+    background: var(--button-text);
+    border: 1px solid var(--accent);
+    padding: calc(var(--spacing) - 1px) calc((var(--spacing) * 2) - 1px);
+    &.plain {
+      color: var(--text);
+      border: 1px solid var(--text);
+    }
+    &.success {
+      color: var(--success);
+      border: 1px solid var(--success);
+    }
+    &.error {
+      color: var(--error);
+      border: 1px solid var(--error);
+    }
+    &.warning {
+      color: var(--warning);
+      border: 1px solid var(--warning);
+    }
+    &.info {
+      color: var(--info);
+      border: 1px solid var(--info);
+    }
+  }
+}

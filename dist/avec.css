@@ -1510,6 +1510,57 @@ input[type="button"]:enabled:hover {
   filter: brightness(1.4);
   cursor: pointer; }
 
+button.outline,
+[role="button"].outline,
+input[type="submit"].outline,
+input[type="reset"].outline,
+input[type="button"].outline,
+a[role="button"].outline {
+  color: var(--accent);
+  background: var(--button-text);
+  border: 1px solid var(--accent);
+  padding: calc(var(--spacing) - 1px) calc((var(--spacing) * 2) - 1px); }
+  button.outline.plain,
+  [role="button"].outline.plain,
+  input[type="submit"].outline.plain,
+  input[type="reset"].outline.plain,
+  input[type="button"].outline.plain,
+  a[role="button"].outline.plain {
+    color: var(--text);
+    border: 1px solid var(--text); }
+  button.outline.success,
+  [role="button"].outline.success,
+  input[type="submit"].outline.success,
+  input[type="reset"].outline.success,
+  input[type="button"].outline.success,
+  a[role="button"].outline.success {
+    color: var(--success);
+    border: 1px solid var(--success); }
+  button.outline.error,
+  [role="button"].outline.error,
+  input[type="submit"].outline.error,
+  input[type="reset"].outline.error,
+  input[type="button"].outline.error,
+  a[role="button"].outline.error {
+    color: var(--error);
+    border: 1px solid var(--error); }
+  button.outline.warning,
+  [role="button"].outline.warning,
+  input[type="submit"].outline.warning,
+  input[type="reset"].outline.warning,
+  input[type="button"].outline.warning,
+  a[role="button"].outline.warning {
+    color: var(--warning);
+    border: 1px solid var(--warning); }
+  button.outline.info,
+  [role="button"].outline.info,
+  input[type="submit"].outline.info,
+  input[type="reset"].outline.info,
+  input[type="button"].outline.info,
+  a[role="button"].outline.info {
+    color: var(--info);
+    border: 1px solid var(--info); }
+
 fieldset legend, label {
   display: block;
   margin-bottom: calc(var(--spacing) * 0.5); }
