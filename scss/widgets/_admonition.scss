@@ -31,4 +31,7 @@
     &.success {
         --admonition: var(--success);
     }
+    &.neutral {
+        --admonition: var(--text-light);
+    }
 }

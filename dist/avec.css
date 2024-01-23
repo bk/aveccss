@@ -1976,6 +1976,8 @@ nav details[role="menu"] {
     --admonition: var(--error); }
   .admonition.success {
     --admonition: var(--success); }
+  .admonition.neutral {
+    --admonition: var(--text-light); }
 
 .stack {
   margin-top: calc(var(--spacing) * 2);
