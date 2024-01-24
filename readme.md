@@ -449,20 +449,7 @@ The list shown by the dropdown is normally placed so that its left side aligns w
 
 ### Badges
 
-A badge shows a status indicator or a number which relates to a specific (typically small) element,
-often a button, a tab or a navigation item. The value for the badge is given with a `data-badge` attribute.
-An empty `data-badge` leads to a badge that is a small dot.
-
-<div class="mb-2">
-  * [ ] <button class="badge mr-1" data-badge="917">First</button>
-<button class="badge mr-1" data-badge="">Second</button>
-<button class="badge" data-badge="✓">Third</button>
-</div>
-
-<div>
-<a class="badge" data-badge="88" href="#">Whatever</a>
-</div>
-
+A badge shows a status indicator or a number which relates to a specific (typically small) element, often a button, a tab or a navigation item. It is triggered with the `badge` class. The value for the badge is given with a `data-badge` attribute.  An empty `data-badge` leads to a badge that is a small dot.
 
 ```html
 <div>
@@ -470,6 +457,52 @@ An empty `data-badge` leads to a badge that is a small dot.
   <button class="badge mr-1" data-badge="">Second</button>
   <button class="badge" data-badge="✓">Third</button>
 </div>
+```
+
+### Loading
+
+An element can be given a spinning loading indicator by setting the attribute `aria-busy` to `true`.
+
+### Animations
+
+A small collection of animations is available by adding a class to an element. Currently these classes are:
+
+- `hover-grow`: Enlarges the element slightly when hovering over it with the mouse.
+- `bounce`, `bounce-in`, `fade-in`, `fade-in-left`, `fade-in-right`: One-time animations that trigger when the page is loaded, the element is added to the DOM, or the class is applied to the element.
+- `pulse`: an infinite pulsating opacity effect, mainly useful for placeholder content while waiting for an update from the backend.
+
+### Tree
+
+A tree-like unordered list with collapsible subitems can be achieved by setting the class `tree` on the enclosing `<ul>` and using `<details>` for the toggleable items. The markup looks like this:
+
+```html
+<ul class="tree">
+  <li>Plain item</li>
+  <li>
+    Item with fixed subitems
+    <ul>
+      <li>subitem 1</li>
+      <li>subitem 2</li>
+    </ul>
+  </li>
+  <li>
+    <details open>
+      <summary>Toggleable item, open by default</summary>
+      <ul>
+        <li>Normal subitem</li>
+        <li>
+          <details>
+            <summary>Toggleable item</summary>
+            <ul>
+              <li>subsubitem 1</li>
+              <li>subsubitem 2</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </details>
+  </li>
+</ul>
 ```
 
 ## Utility classes
