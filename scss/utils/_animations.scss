@@ -1,0 +1,130 @@
+// A small collection of elementary animations.
+// Most of them are based on some of the ones in Cirrus (cirrus-ui.com).
+
+// Enlarge element on hover
+
+.hover-grow {
+    transition-duration: 33ms;
+}
+.hover-grow:hover {
+    transition-duration: 67ms;
+    transform: scale(1.1);
+}
+
+
+// Entrance animations
+
+.bounce, .bounce-in, .fade-in {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.bounce {
+    animation-name: bounce;
+    transform-origin: center bottom;
+}
+.bounce-in {
+    animation-name: bouncein;
+}
+.fade-in {
+    animation-name: fadein;
+}
+
+.fade-in-left, .fade-in-right {
+    animation-duration: .80s;
+}
+.fade-in-left {
+    animation-name: fadeinleft;
+}
+.fade-in-right {
+    animation-name: fadeinright;
+}
+
+// Infinite animations
+
+.pulse {
+  animation: pulse 1.5s cubic-bezier(.4,0,.6,1) infinite;
+}
+
+// Keyframe definitions for the above.
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    transform: translateZ(0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    transform: translate3d(0,-30px,0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    transform: translate3d(0,-15px,0);
+  }
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+@keyframes bouncein {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    animation-timing-function: cubic-bezier(.215,.61,.355,1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(.3,.3,.3);
+  }
+  20% {
+    transform: scale3d(1.1,1.1,1.1);
+  }
+  40% {
+    transform: scale3d(.9,.9,.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03,1.03,1.03);
+  }
+  80% {
+    transform: scale3d(.97,.97,.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinleft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeinright {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .4;
+  }
+}
