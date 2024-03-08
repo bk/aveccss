@@ -3,6 +3,8 @@ all: dist \
 	dist/avec.min.css \
 	dist/avec-slim.css \
 	dist/avec-slim.min.css \
+	dist/avec-classless.css \
+	dist/avec-classless.min.css \
 	dist/avec.default-theme.css \
 	dist/avec.selenized-theme.css \
 	dist/avec.one-theme.css \
@@ -28,8 +30,14 @@ dist/avec.css: $(scss_files)
 dist/avec-slim.css: $(scss_files)
 	pysassc scss/avec-slim.scss dist/avec-slim.css
 
+dist/avec-classless.css: $(scss_files)
+	pysassc scss/avec-classless.scss dist/avec-classless.css
+
 dist/avec-slim.min.css: $(scss_files)
 	pysassc scss/avec-slim.scss -t compressed dist/avec-slim.min.css
+
+dist/avec-classless.min.css: $(scss_files)
+	pysassc scss/avec-classless.scss -t compressed dist/avec-classless.min.css
 
 dist/avec.min.css: $(scss_files)
 	pysassc -t compressed -m scss/avec.scss dist/avec.min.css

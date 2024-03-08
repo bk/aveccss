@@ -38,8 +38,10 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+    @if not ($classless) {
     > div.container {
         width: 100%;
         max-width: 100%;
+    }
     }
 }

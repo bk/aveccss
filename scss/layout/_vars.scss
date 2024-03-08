@@ -5,4 +5,6 @@
     --grid-max-col-width: 120px; // will be adjusted; see _grid.scss.
     --column-gap: calc(var(--spacing) * 2);
     --row-gap: calc(var(--spacing) * 2);
+    --textcol-width-normal: 19rem;
+    --textcol-width-narrow: 10rem;
 }

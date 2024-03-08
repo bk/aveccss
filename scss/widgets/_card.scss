@@ -41,10 +41,12 @@ article {
 
 // Make sure the footer is at the bottom
 // when cards are side-by side.
+@if not ($classless) {
 .grid > article, .grid-sm > article, .grid-xs > article {
     display: flex;
     flex-direction: column;
     > footer {
         margin-top: auto;
     }
+}
 }

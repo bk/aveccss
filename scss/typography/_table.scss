@@ -30,6 +30,7 @@ table caption {
   margin-bottom: var(--spacing);
 }
 
+@if not ($classless) {
 table.striped {
   th {
     background: var(--accent-bg);
@@ -37,4 +38,5 @@ table.striped {
   tr:nth-child(even) {
     background: var(--accent-bg);
   }
+}
 }

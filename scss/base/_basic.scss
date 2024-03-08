@@ -28,9 +28,11 @@
 // Make sure theme colors are actually applied!
 // (otherwise it would depend on what kind of element you're giving the class)
 
+@if not ($classless) {
 .light-theme, .dark-theme, .reverse-theme {
   background-color: var(--bg);
   color: var(--text);
+}
 }
 
 

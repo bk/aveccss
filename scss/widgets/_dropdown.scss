@@ -31,8 +31,10 @@ details[role="dropdown"], details[role="menu"] {
             display: none;
         }
     }
-    &.active > summary {
+    @if not ($classless) {
+      &.active > summary {
         font-weight: bold;
+      }
     }
     // ul = The list (normally, of links) in the dropdown
     > ul {
@@ -41,9 +43,11 @@ details[role="dropdown"], details[role="menu"] {
         min-width: 100%;
         top: auto;
         left: 0;
-        &.rightset {
+        @if not ($classless) {
+          &.rightset {
             left: auto;
             right: 0;
+          }
         }
         display: flex;
         flex-direction: column;
@@ -59,8 +63,14 @@ details[role="dropdown"], details[role="menu"] {
             padding: calc(var(--spacing) * 0.25) var(--spacing);
             text-align: left;
             white-space: nowrap;
-            &:hover, &.active {
+            @if ($classless) {
+              &:hover {
                 background: var(--contrast-bg);
+              }
+            } else {
+              &:hover, &.active {
+                background: var(--contrast-bg);
+              }
             }
             a {
                 text-decoration: none;

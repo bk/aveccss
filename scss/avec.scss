@@ -1,5 +1,6 @@
 // No SCSS variables should be defined outside files in vars/
-/* AvecCSS v1.1 */
+/* AvecCSS v1.2 */
+@import "vars/avec";
 @import "vars/fonts";
 @import "vars/breakpoints";
 @import "vars/themes/default";
@@ -19,6 +20,7 @@
 @import "layout/container";
 @import "layout/grid";
 @import "layout/cols";
+@import "layout/textcols";
 @import "layout/flex";
 @import "layout/order";
 @import "layout/nav";

@@ -227,6 +227,12 @@ An example of a moderately complex layout implemented with these building blocks
 </div>
 ```
 
+### Text columns
+
+The `.textcols` class arranges the contents into equally-wide, newspaper-like columns with flowing text. The number of columns depends on the horizontal space available. The ideal width of each column depends on the variable `--textcol-width-normal`, which by default is `19rem`.
+
+Add the `.narrow` class, and this sets the ideal column width to `--textcol-width-narrow`, which by default is `10rem`.
+
 ### Header, navigation, footer
 
 #### Header
@@ -665,6 +671,16 @@ There are several variables for font size:
 - `--spacing`: The basic spacing unit, affecting most of the padding and margin settings, as well as few others. Set to 0.625rem by default, which corresponds to 10px for most people.
 - `--border-radius`: The border-radius for rounded corners. This is set to half of `--spacing` by default, i.e. generally 5px.
 
+## Variants
+
+Three compiled versions of AvecCSS are available in the `dist/` subdirectory:
+
+1. The normal version with full functionality, `avec.css` and `avec.min.css` – about 11K minified and gzipped.
+
+2. The classless version without any class definitions but with all other functionality, `avec-classless.css` and `avec-classless.min.css` – about 4K minified and gzipped.
+
+3. The slim version without most layout features and utility classes and no form settings except for buttons, `avec-slim.css` and `avec-slim.min.css` – about 3K minified and gzipped.
+
 ## Customizing AvecCSS
 
 - A lot of customization can be done by modifying the CSS variables used by AvecCSS.
@@ -674,6 +690,7 @@ There are several variables for font size:
 - Similarly, if you want to create your own color theme theme without touching SCSS, it is quite easy to modify one of the theme files from `dist/` and save it under a new name.
 
 - If you need to customize AvecCSS beyond this, the best way is to clone the project and change the SCSS source.
+
 
 ## License
 

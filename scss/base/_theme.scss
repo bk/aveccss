@@ -27,6 +27,7 @@
 
 // Dark theme 
 // .reverse-theme switches to dark theme if light theme is in effect, and vice versa
+@if not ($classless) {
 .dark-theme, .reverse-theme, .light-theme .reverse-theme {
   --bg: #{$dark-bg};
   --card-bg: #{$dark-card-bg};
@@ -51,6 +52,7 @@
   --button-text: var(--bg);
   --mark-text: var(--text);
   --code-bg: var(--accent-bg);
+}
 }
 
 @if $theme-auto-switch {
@@ -85,6 +87,7 @@
         opacity: 0.8;
       }
     }
+    @if not ($classless) {
     .reverse-theme {
       --bg: #{$light-bg};
       --card-bg: #{$light-card-bg};
@@ -116,9 +119,11 @@
         }
       }
     }
+    }
   }
 }
 
+@if not ($classless) {
 .dark-theme .reverse-theme {
   --bg: #{$light-bg};
   --card-bg: #{$light-card-bg};
@@ -143,4 +148,5 @@
   --button-text: var(--bg);
   --mark-text: var(--text);
   --code-bg: var(--accent-bg);
+}
 }

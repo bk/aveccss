@@ -10,6 +10,7 @@ a, [role="link"] {
   //&:visited {
   //  color: inherit;
   //}
+  @if not ($classless) {
   &.plain {
     text-decoration: none;
     &:hover {
@@ -25,5 +26,6 @@ a, [role="link"] {
   &.text {
     color: var(--text-color);
     text-decoration: none;
+  }
   }
 }

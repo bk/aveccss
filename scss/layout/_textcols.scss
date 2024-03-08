@@ -1,0 +1,8 @@
+.textcols {
+    @media (min-width: $bp-sm) {
+        columns: var(--textcol-width-normal) auto;
+    }
+    &.narrow {
+        columns: var(--textcol-width-narrow) auto;
+    }
+}

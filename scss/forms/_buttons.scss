@@ -44,6 +44,7 @@ input[type="button"]:enabled:hover {
   cursor: pointer;
 }
 
+@if not ($classless) {
 button,
 [role="button"],
 input[type="submit"],
@@ -76,4 +77,5 @@ a[role="button"] {
       border: 1px solid var(--info);
     }
   }
+}
 }

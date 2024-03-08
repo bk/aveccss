@@ -1,8 +1,8 @@
-// Slimmed-down version of avecCSS.
-// - Without most layout features and utility classes.
-// - No forms settings except for buttons.
-/* AvecCSS - slim v1.2 */
-@import "vars/avec";
+// AvecCSS without classes. Obviously missing many features,
+// but nevertheless has some widgets missing from the slim variant.
+/* AvecCSS - classless v1.2 */
+
+$classless: true;
 @import "vars/fonts";
 @import "vars/breakpoints";
 @import "vars/themes/default";
@@ -14,9 +14,10 @@
 
 @import "layout/vars";
 @import "layout/basic";
-@import "layout/container";
+@import "layout/container-classless";
 @import "layout/nav";
 @import "layout/img";
+@import "layout/aside";
 
 @import "typography/headings";
 @import "typography/links";
@@ -27,3 +28,12 @@
 @import "typography/misc";
 
 @import "forms/buttons";
+@import "forms/input";
+@import "forms/label";
+@import "forms/select";
+
+@import "widgets/accordion";
+@import "widgets/card";
+@import "widgets/dropdown";
+
+@import "utils/loading";
