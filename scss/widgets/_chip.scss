@@ -1,0 +1,26 @@
+// Chips are typically used for tags and similar entities.
+// They can also be used as the basis for more elaborate widgets which
+// include images or icons (e.g. a widget representing the recipient of a message).
+
+.chip {
+    border: 1px solid var(--border);
+    background: var(--contrast-bg);
+    border-radius: calc(var(--border-radius) * 2);
+    padding-inline: calc(var(--spacing) / 2);
+    display: inline-flex;
+    align-items: center;
+    vertical-align: bottom;
+    > img {
+        max-height: 1em;
+    }
+}
+a.chip, .chip > a {
+    text-decoration: none;
+}
+a.chip {
+    color: var(--text);
+    &:hover {
+        background: var(--card-bg);
+        border: 1px solid var(--accent);
+    }
+}

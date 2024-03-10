@@ -1,5 +1,5 @@
 // No SCSS variables should be defined outside files in vars/
-/* AvecCSS v1.2 */
+/* AvecCSS v1.3 */
 @import "vars/avec";
 @import "vars/fonts";
 @import "vars/breakpoints";
@@ -41,6 +41,7 @@
 @import "forms/select";
 
 @import "widgets/burger-menu";
+@import "widgets/box";
 @import "widgets/card";
 @import "widgets/modal";
 @import "widgets/tabs";
@@ -50,6 +51,7 @@
 @import "widgets/admonition";
 @import "widgets/stack";
 @import "widgets/badge";
+@import "widgets/chip";
 @import "widgets/tree";
 
 @import "utils/seen";

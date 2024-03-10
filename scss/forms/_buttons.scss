@@ -77,5 +77,23 @@ a[role="button"] {
       border: 1px solid var(--info);
     }
   }
+  &.iconbutton {
+    color: currentColor;
+    box-shadow: none;
+    text-align: center;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0;
+    font-size: 1.5em;
+    transition: font-weight .2s ease-in-out;
+    display: inline-block;
+    &:hover {
+      outline: 1px solid var(--accent);
+      outline-offset: .25rem;
+    }
+  }
 }
 }

@@ -274,6 +274,12 @@ Cards are represented using the `<article>` tag. They have a different backgroun
 
 Cards can have a `<header>`, a `<footer>`, or both; these have an accented background. Images in the header are handled specially so as to reach the card border rather than respect its padding.
 
+### Boxes
+
+A box is a block-level element (normally a `<div>`) with the class `box`. It has a shaded background and a border but unlike a card it has no shadow.
+
+A box may have a `<header>`.
+
 ### Main/mobile menu component
 
 The main menu must be inside a `<nav>` in order to function as intended.
@@ -465,6 +471,12 @@ A badge shows a status indicator or a number which relates to a specific (typica
 </div>
 ```
 
+### Chips
+
+Chips (also known as "pills") are used for tags and similar entities. They can also be used as the basis for more elaborate widgets which include images or icons (e.g. a widget representing a user with an avatar image).
+
+A chip is formed by assigning the `chip` class to an inline element, often an `<a>` or a `<span>`.
+
 ### Loading
 
 An element can be given a spinning loading indicator by setting the attribute `aria-busy` to `true`.
@@ -574,6 +586,8 @@ Background color can be set with the following classes: `bg-accent`, `bg-contras
 The colors which are applied are from the active theme. They are registered in CSS variables which mostly have names similar to the class names.
 
 An outline button style can be turned on by adding the class `outline` to buttons and button-like elements. The foreground and border color on such buttons can be controlled with the additional classes `success`, `error`, `warning`, `info`, or `plain`. The last of these gives the button the default text foreground color.
+
+A standalone icon linked to an action is best represented as a button/button-like link with the `iconbutton` class.
 
 ### Alignment
 

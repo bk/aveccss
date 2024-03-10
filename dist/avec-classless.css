@@ -228,7 +228,9 @@ th {
   --h6-size: 1rem; }
 
 html {
-  font-family: var(--main-font); }
+  font-family: var(--main-font);
+  background-color: var(--bg);
+  color: var(--text); }
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth; } }

@@ -302,7 +302,9 @@ th {
   color: var(--text); }
 
 html {
-  font-family: var(--main-font); }
+  font-family: var(--main-font);
+  background-color: var(--bg);
+  color: var(--text); }
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth; } }
@@ -731,3 +733,30 @@ a[role="button"].outline {
   a[role="button"].outline.info {
     color: var(--info);
     border: 1px solid var(--info); }
+
+button.iconbutton,
+[role="button"].iconbutton,
+input[type="submit"].iconbutton,
+input[type="reset"].iconbutton,
+input[type="button"].iconbutton,
+a[role="button"].iconbutton {
+  color: currentColor;
+  box-shadow: none;
+  text-align: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0;
+  font-size: 1.5em;
+  transition: font-weight .2s ease-in-out;
+  display: inline-block; }
+  button.iconbutton:hover,
+  [role="button"].iconbutton:hover,
+  input[type="submit"].iconbutton:hover,
+  input[type="reset"].iconbutton:hover,
+  input[type="button"].iconbutton:hover,
+  a[role="button"].iconbutton:hover {
+    outline: 1px solid var(--accent);
+    outline-offset: .25rem; }

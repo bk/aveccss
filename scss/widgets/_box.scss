@@ -1,0 +1,17 @@
+.box {
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    background-color: var(--accent-bg);
+    border: 1px solid var(--border);
+    overflow: clip;
+    > header {
+        background-color: var(--contrast-bg);
+        font-family: var(--heading-font);
+        font-weight: bold;
+        margin: calc(var(--spacing) * -1);
+        margin-bottom: var(--spacing);
+        padding: 0 var(--spacing);
+    }
+}

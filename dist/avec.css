@@ -303,7 +303,9 @@ th {
   color: var(--text); }
 
 html {
-  font-family: var(--main-font); }
+  font-family: var(--main-font);
+  background-color: var(--bg);
+  color: var(--text); }
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth; } }
@@ -1570,6 +1572,33 @@ a[role="button"].outline {
     color: var(--info);
     border: 1px solid var(--info); }
 
+button.iconbutton,
+[role="button"].iconbutton,
+input[type="submit"].iconbutton,
+input[type="reset"].iconbutton,
+input[type="button"].iconbutton,
+a[role="button"].iconbutton {
+  color: currentColor;
+  box-shadow: none;
+  text-align: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0;
+  font-size: 1.5em;
+  transition: font-weight .2s ease-in-out;
+  display: inline-block; }
+  button.iconbutton:hover,
+  [role="button"].iconbutton:hover,
+  input[type="submit"].iconbutton:hover,
+  input[type="reset"].iconbutton:hover,
+  input[type="button"].iconbutton:hover,
+  a[role="button"].iconbutton:hover {
+    outline: 1px solid var(--accent);
+    outline-offset: .25rem; }
+
 fieldset legend, label {
   display: block;
   margin-bottom: calc(var(--spacing) * 0.5); }
@@ -1708,6 +1737,22 @@ nav .menu > label.close {
 
 .menu-icon::after {
   top: 6px; }
+
+.box {
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  background-color: var(--accent-bg);
+  border: 1px solid var(--border);
+  overflow: clip; }
+  .box > header {
+    background-color: var(--contrast-bg);
+    font-family: var(--heading-font);
+    font-weight: bold;
+    margin: calc(var(--spacing) * -1);
+    margin-bottom: var(--spacing);
+    padding: 0 var(--spacing); }
 
 article {
   margin: calc(var(--spacing) * 2) 0;
@@ -2033,6 +2078,26 @@ nav details[role="menu"] {
     min-width: .5rem;
     min-height: .5rem;
     padding: 0; }
+
+.chip {
+  border: 1px solid var(--border);
+  background: var(--contrast-bg);
+  border-radius: calc(var(--border-radius) * 2);
+  padding-inline: calc(var(--spacing) / 2);
+  display: inline-flex;
+  align-items: center;
+  vertical-align: bottom; }
+  .chip > img {
+    max-height: 1em; }
+
+a.chip, .chip > a {
+  text-decoration: none; }
+
+a.chip {
+  color: var(--text); }
+  a.chip:hover {
+    background: var(--card-bg);
+    border: 1px solid var(--accent); }
 
 ul.tree {
   margin-left: 0;
