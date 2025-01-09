@@ -34,9 +34,9 @@
 .fc-01a > * { flex: 0 1 auto; } // the default; good for items of fixed size
 .fc-00a > * { flex: 0 0 auto; }
 .fc-000 > * { flex: 0 0 0; }
-.fc-01a > * { flex: 0 1 auto; }
 .fc-010 > * { flex: 0 1 0; }
 .fc-100 > * { flex: 1 0 0; } // free space distributed to make items the same size
+.fc-10a > * { flex: 1 0 auto; }
 .fc-11a > * { flex: 1 1 auto; } // free space evenly to items regardless of size
 
 // Automatic padding for children based on negative

@@ -35,7 +35,7 @@ input[type=submit][aria-busy=true] {
     border-radius: 1em;
     border-right-color: transparent;
     content: "";
-    vertical-align: text-bottom;
+    // vertical-align: text-bottom;
     vertical-align: -0.125em;
     animation: spinner 1s linear infinite;
     opacity: 0.5; // TODO: variable for this?

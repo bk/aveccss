@@ -1,6 +1,5 @@
 // Mostly from picnic normalize except for making border-box default
 html {
-  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box;
@@ -86,9 +85,7 @@ svg:not(:root) {
 }
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
-  height: 0;
 }
 
 pre {
