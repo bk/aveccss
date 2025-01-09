@@ -1,6 +1,5 @@
-/* AvecCSS - slim v1.3 */
+/* AvecCSS - slim v1.3.2*/
 html {
-  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box; }
@@ -73,9 +72,7 @@ svg:not(:root) {
   overflow: hidden; }
 
 hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
+  box-sizing: content-box; }
 
 pre {
   overflow: auto; }
@@ -342,7 +339,7 @@ body {
 
 body > div, body > p, body > blockquote,
 body > h1, body > h2, body > h3, body > h4, body > h5, body > h6, body > hgroup,
-body > ul, body > ol, body > dl, body menu,
+body > ul, body > ol, body > dl,
 body > pre, body > form, body > figure,
 body > section, body > article, body > nav,
 body > address, body > hr, body > table {
@@ -563,7 +560,6 @@ kbd {
 pre {
   padding: 1rem 1.4rem;
   max-width: 100%;
-  overflow: auto;
   color: var(--preformatted);
   background: var(--accent-bg);
   border: 1px solid var(--border);
@@ -577,7 +573,6 @@ pre code {
   border-radius: 0; }
 
 table {
-  border-collapse: collapse;
   margin: 1.5rem 0;
   overflow: auto;
   width: 100%;

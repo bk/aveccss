@@ -1,7 +1,6 @@
 @charset "UTF-8";
-/* AvecCSS v1.3 */
+/* AvecCSS v1.3.2*/
 html {
-  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box; }
@@ -74,9 +73,7 @@ svg:not(:root) {
   overflow: hidden; }
 
 hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
+  box-sizing: content-box; }
 
 pre {
   overflow: auto; }
@@ -343,7 +340,7 @@ body {
 
 body > div, body > p, body > blockquote,
 body > h1, body > h2, body > h3, body > h4, body > h5, body > h6, body > hgroup,
-body > ul, body > ol, body > dl, body menu,
+body > ul, body > ol, body > dl,
 body > pre, body > form, body > figure,
 body > section, body > article, body > nav,
 body > address, body > hr, body > table {
@@ -1032,14 +1029,14 @@ body > main.items-fixed > *, .container.items-fixed > * {
 .fc-000 > * {
   flex: 0 0 0; }
 
-.fc-01a > * {
-  flex: 0 1 auto; }
-
 .fc-010 > * {
   flex: 0 1 0; }
 
 .fc-100 > * {
   flex: 1 0 0; }
+
+.fc-10a > * {
+  flex: 1 0 auto; }
 
 .fc-11a > * {
   flex: 1 1 auto; }
@@ -1401,7 +1398,6 @@ kbd {
 pre {
   padding: 1rem 1.4rem;
   max-width: 100%;
-  overflow: auto;
   color: var(--preformatted);
   background: var(--accent-bg);
   border: 1px solid var(--border);
@@ -1415,7 +1411,6 @@ pre code {
   border-radius: 0; }
 
 table {
-  border-collapse: collapse;
   margin: 1.5rem 0;
   overflow: auto;
   width: 100%;
@@ -1823,8 +1818,14 @@ article {
   .modal > input:checked ~ .overlay ~ * {
     max-height: 90%;
     overflow: auto;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);
-    transform: translateX(-50%) translateY(-50%) scale(1, 1); }
+    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    min-width: 90%; }
+    @media (min-width: 768px) {
+      .modal > input:checked ~ .overlay ~ * {
+        min-width: auto; } }
+    @media (min-width: 960px) {
+      .modal > input:checked ~ .overlay ~ * {
+        max-width: Min(var(--bp-sm), 70%); } }
     .modal > input:checked ~ .overlay ~ * label.close {
       position: absolute;
       top: 0;
@@ -1835,14 +1836,6 @@ article {
       color: var(--text-light);
       cursor: pointer; }
 
-.modal .overlay ~ * {
-  min-width: 90%; }
-  @media (min-width: 768px) {
-    .modal .overlay ~ * {
-      min-width: auto; } }
-  @media (min-width: 960px) {
-    .modal .overlay ~ * {
-      max-width: Min(var(--bp-sm), 70%); } }
 .tabs {
   margin-top: var(--spacing);
   margin-bottom: calc(var(--spacing) * 2);
@@ -2876,7 +2869,6 @@ input[type=submit][aria-busy=true] {
   border-radius: 1em;
   border-right-color: transparent;
   content: "";
-  vertical-align: text-bottom;
   vertical-align: -0.125em;
   animation: spinner 1s linear infinite;
   opacity: 0.5; }
