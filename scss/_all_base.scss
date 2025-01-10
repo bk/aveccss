@@ -1,0 +1,4 @@
+@use "base/normalize";
+@use "base/fonts"; // css vars for font settings
+@use "base/theme"; // css vars for color/bg settings
+@use "base/basic" as base_basic;

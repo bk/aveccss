@@ -1,0 +1,14 @@
+// Everything except _vars.
+
+// With the exception of breakpoints for @media declarations
+// (where CSS variables cannot currently be used),
+// no non-$conf SCSS variables should be referenced except
+// in files in vars/ or base/. Any reuseable settings
+// therein should be turned into CSS variables.
+
+@use "all_base";
+@use "all_layout";
+@use "all_typography";
+@use "all_forms";
+@use "all_widgets";
+@use "all_utils";
