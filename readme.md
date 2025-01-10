@@ -17,6 +17,9 @@ The main features of AvecCSS are the following:
 - Has a few useful components (e.g. "hamburger" menu, tabboxes, admonitions, cards), none of which requires Javascript.
 - Easily customizable even without touching the SCSS source; colors and some layout features are controlled with CSS variables.
 
+> [!NOTE]
+> AvecCSS now uses the Dart Sass module system and is thus incompatible with compilers based on the outdated `libsass` (such as `sassc`).
+
 ## Themes
 
 ### Light and dark mode
