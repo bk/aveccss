@@ -4,6 +4,11 @@
 // Also 'first', 'last' and 'none' (= default ordering).
 // Add -sm, -md, -lg, -xl for responsive versions.
 
+@use "sass:map";
+@use "../vars/avec";
+
+$bp: avec.$bp !default;
+
 .ord-first { order: -1; }
 .ord-1 { order: 1; }
 .ord-2 { order: 2; }
@@ -20,7 +25,7 @@
 .ord-last { order: 999; }
 .ord-none { order: revert; }
 
-@media (min-width: $bp-sm) {
+@media (min-width: map.get($bp, "sm")) {
     .ord-first-sm { order: -1; }
     .ord-1-sm { order: 1; }
     .ord-2-sm { order: 2; }
@@ -38,7 +43,7 @@
     .ord-none-sm { order: revert; }
 }
 
-@media (min-width: $bp-md) {
+@media (min-width: map.get($bp, "md")) {
     .ord-first-md { order: -1; }
     .ord-1-md { order: 1; }
     .ord-2-md { order: 2; }
@@ -56,7 +61,7 @@
     .ord-none-md { order: revert; }
 }
 
-@media (min-width: $bp-lg) {
+@media (min-width: map.get($bp, "lg")) {
     .ord-first-lg { order: -1; }
     .ord-1-lg { order: 1; }
     .ord-2-lg { order: 2; }
@@ -74,7 +79,7 @@
     .ord-none-lg { order: revert; }
 }
 
-@media (min-width: $bp-xl) {
+@media (min-width: map.get($bp, "xl")) {
     .ord-first-xl { order: -1; }
     .ord-1-xl { order: 1; }
     .ord-2-xl { order: 2; }

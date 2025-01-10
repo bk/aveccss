@@ -1,3 +1,9 @@
+@use "sass:map";
+@use "../vars/avec";
+
+$conf: () !default;
+$conf: map.merge(avec.$conf, $conf);
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   font-weight: var(--heading-weight);
@@ -11,7 +17,7 @@ h4, h5, h6 {
   margin: var(--spacing) 0 0 0;
 }
 
-@if $classless {
+@if map.get($conf, "classless") {
   h1 { font-size: var(--h1-size); }
   h2 { font-size: var(--h2-size); }
   h3 { font-size: var(--h3-size); }
@@ -41,8 +47,8 @@ h4, h5, h6 {
 
 // Heading group at top of section/page
 hgroup {
-    > * { margin: 0; }
     margin: 0 0 calc(var(--spacing) * 3) 0;
+    > * { margin: 0; }
     > *:last-child {
       color: var(--text-light);
       font-weight: normal;

@@ -1,3 +1,9 @@
+@use "sass:map";
+@use "../vars/avec";
+
+$conf: () !default;
+$conf: map.merge(avec.$conf, $conf);
+
 a, [role="link"] {
   color: var(--accent);
   text-decoration: underline;
@@ -10,7 +16,7 @@ a, [role="link"] {
   //&:visited {
   //  color: inherit;
   //}
-  @if not ($classless) {
+  @if not (map.get($conf, "classless")) {
   &.plain {
     text-decoration: none;
     &:hover {

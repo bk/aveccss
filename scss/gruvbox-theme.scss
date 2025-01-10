@@ -1,4 +1,6 @@
-/* AvecCSS v1.3.2- Gruvbox theme */
-$classless: false;
-@import "vars/themes/gruvbox";
-@import "base/theme";
+/* AvecCSS v2.0 - Gruvbox theme */
+@use "vars/themes/gruvbox";
+@use "base/theme" with (
+  $light: gruvbox.$light,
+  $dark: gruvbox.$dark
+);

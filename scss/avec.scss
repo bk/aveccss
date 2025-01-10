@@ -1,67 +1,66 @@
 // No SCSS variables should be defined outside files in vars/
-/* AvecCSS v1.3.2*/
-@import "vars/avec";
-@import "vars/fonts";
-@import "vars/breakpoints";
-@import "vars/themes/default";
+/* AvecCSS v2.0*/
+@use "vars/avec";
+@use "vars/fonts" as fontvars;
+@use "vars/themes/default";
 
 // With the exception of breakpoints for @media declarations
 // (where CSS variables cannot currently be used),
-// no SCSS variables should be referenced except
+// no non-$conf SCSS variables should be referenced except
 // in files in vars/ or base/. Any reuseable settings
 // therein should be turned into CSS variables.
-@import "base/normalize";
-@import "base/fonts"; // css vars for font settings
-@import "base/theme"; // css vars for color/bg settings
-@import "base/basic";
+@use "base/normalize";
+@use "base/fonts"; // css vars for font settings
+@use "base/theme"; // css vars for color/bg settings
+@use "base/basic" as base_basic;
 
-@import "layout/vars";
-@import "layout/basic";
-@import "layout/container";
-@import "layout/grid";
-@import "layout/cols";
-@import "layout/textcols";
-@import "layout/flex";
-@import "layout/order";
-@import "layout/nav";
-@import "layout/aside";
-@import "layout/img";
+@use "layout/vars";
+@use "layout/basic";
+@use "layout/container";
+@use "layout/grid";
+@use "layout/cols";
+@use "layout/textcols";
+@use "layout/flex";
+@use "layout/order";
+@use "layout/nav";
+@use "layout/aside";
+@use "layout/img";
 
-@import "typography/headings";
-@import "typography/links";
-@import "typography/code";
-@import "typography/table";
-@import "typography/blockquote";
-@import "typography/lists";
-@import "typography/misc";
+@use "typography/headings";
+@use "typography/links";
+@use "typography/code";
+@use "typography/table";
+@use "typography/blockquote";
+@use "typography/lists";
+@use "typography/misc";
 
-@import "forms/buttons";
-@import "forms/label";
-@import "forms/input";
-@import "forms/select";
+@use "forms/buttons";
+@use "forms/label";
+@use "forms/input";
+@use "forms/select";
 
-@import "widgets/burger-menu";
-@import "widgets/box";
-@import "widgets/card";
-@import "widgets/modal";
-@import "widgets/tabs";
-@import "widgets/accordion";
-@import "widgets/dropdown";
-@import "widgets/hero";
-@import "widgets/admonition";
-@import "widgets/stack";
-@import "widgets/badge";
-@import "widgets/chip";
-@import "widgets/tree";
+@use "widgets/burger-menu";
+@use "widgets/box";
+@use "widgets/card";
+@use "widgets/modal";
+@use "widgets/tabs";
+@use "widgets/accordion";
+@use "widgets/dropdown";
+@use "widgets/hero";
+@use "widgets/admonition";
+@use "widgets/stack";
+@use "widgets/badge";
+@use "widgets/chip";
+@use "widgets/tree";
 
-@import "utils/seen";
-@import "utils/display";
-@import "utils/widths";
-@import "utils/spacing";
-@import "utils/borders";
-@import "utils/align";
-@import "utils/x-scroll";
-@import "utils/colors";
-@import "utils/font";
-@import "utils/loading";
-@import "utils/animations";
+@use "utils/seen";
+@use "utils/display";
+@use "utils/widths";
+@use "utils/spacing";
+@use "utils/borders";
+@use "utils/align";
+@use "utils/x-scroll";
+@use "utils/colors";
+@use "utils/font";
+@use "utils/loading";
+@use "utils/animations";

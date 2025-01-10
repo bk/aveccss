@@ -1,17 +1,34 @@
 // Global css variables other than color theme and fonts
 // (for those, see _theme.scss and _fonts.scss which must be
 // processed BEFORE this file).
+
+@use "sass:map";
+@use "../vars/avec";
+@use "../vars/fonts";
+
+$bp: avec.$bp !default;
+$container: avec.$container !default;
+$conf: avec.$conf !default;
+
+$spacing: fonts.$spacing !default;
+$h1-size: fonts.$h1-size !default;
+$h2-size: fonts.$h2-size !default;
+$h3-size: fonts.$h3-size !default;
+$h4-size: fonts.$h4-size !default;
+$h5-size: fonts.$h5-size !default;
+$h6-size: fonts.$h6-size !default;
+
 :root {
   // breakpoints
-  --bp-xs: #{$bp-xs};
-  --bp-sm: #{$bp-sm};
-  --bp-md: #{$bp-md};
-  --bp-lg: #{$bp-lg};
-  --bp-xl: #{$bp-xl};
+  --bp-xs: #{map.get($bp, "xs")};
+  --bp-sm: #{map.get($bp, "sm")};
+  --bp-md: #{map.get($bp, "md")};
+  --bp-lg: #{map.get($bp, "lg")};
+  --bp-xl: #{map.get($bp, "xl")};
   // container widths/margins
-  --container-width: #{$container-width};
-  --container-max-width: #{$container-max-width};
-  --container-fixed-margin: #{$container-fixed-margin};
+  --container-width: #{map.get($container, "width")};
+  --container-max-width: #{map.get($container, "max-width")};
+  --container-fixed-margin: #{map.get($container, "fixed-margin")};
   // spacing
   --spacing: #{$spacing};
   // standard border-radius
@@ -28,7 +45,7 @@
 // Make sure theme colors are actually applied!
 // (otherwise it would depend on what kind of element you're giving the class)
 
-@if not ($classless) {
+@if not map.get($conf, "classless") {
 .light-theme, .dark-theme, .reverse-theme {
   background-color: var(--bg);
   color: var(--text);

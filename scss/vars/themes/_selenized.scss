@@ -1,9 +1,6 @@
 // A theme based on Selenized (which is based on Solarized)
 // https://github.com/jan-warchol/selenized
 
-$theme-auto-switch: true !default; // if true, switches to dark mode based on user preference
-$dark-mode-antiglare: false !default; // enable to darken images and videos in dark mode
-
 // LIGHT:
 //  bg_0        #fbf3db
 //  bg_1        #e9e4d0
@@ -30,31 +27,33 @@ $dark-mode-antiglare: false !default; // enable to darken images and videos in d
 //  br_orange   #bc5819
 //  br_violet   #825dc0
 
-$light-bg: #fbf3db !default; // bg_0
-$light-card-bg: #fff9e6 !default; // not in selenized
-$light-accent-bg: #e9e4d0 !default;  // bg_1
-$light-contrast-bg: #cfcebe !default; // bg_2
-$light-text: #3a4d53 !default; // fg_1
-$light-text-vivid: black !default;
-$light-text-light: #53676d !default; // fg_0
-$light-text-heading: $light-text !default;
-$light-border: #909995 !default; // dim_0
-$light-accent: #006dce !default; // br_blue
-$light-code: #bc5819 !default; // br_orange
-$light-preformatted: #3a4d53 !default; // fg_1 (here not different from text)
-$light-marked: #f5e595 !default; // not in selenized
-$light-disabled: #efefef !default; // not in selenized
-$light-info: mediumblue !default;
-$light-warning: darkorange !default;
-$light-error: firebrick !default;
-$light-success: forestgreen !default;
-$light-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(26, 45, 51, 0.01698),
-                   0.0335rem 0.067rem 0.402rem rgba(26, 45, 51, 0.024),
-                   0.0625rem 0.125rem 0.75rem rgba(26, 45, 51, 0.03),
-                   0.1125rem 0.225rem 1.35rem rgba(26, 45, 51, 0.036),
-                   0.2085rem 0.417rem 2.502rem rgba(26, 45, 51, 0.04302),
-                   0.5rem 1rem 6rem rgba(26, 45, 51, 0.06),
-                   0 0 0 0.0625rem rgba(26, 45, 51, 0.015);
+$light: (
+  "bg": #fbf3db, // bg_0
+  "card-bg": #fff9e6, // not in selenized
+  "accent-bg": #e9e4d0,  // bg_1
+  "contrast-bg": #cfcebe, // bg_2
+  "text": #3a4d53, // fg_1
+  "text-vivid": black,
+  "text-light": #53676d, // fg_0
+  "text-heading": #3a4d53,
+  "border": #909995, // dim_0
+  "accent": #006dce, // br_blue
+  "code": #bc5819, // br_orange
+  "preformatted": #3a4d53, // fg_1 (here not different from text)
+  "marked": #f5e595, // not in selenized
+  "disabled": #efefef, // not in selenized
+  "info": mediumblue,
+  "warning": darkorange,
+  "error": firebrick,
+  "success": forestgreen,
+  "box-shadow": (0.0145rem 0.029rem 0.174rem rgba(26, 45, 51, 0.01698),
+                 0.0335rem 0.067rem 0.402rem rgba(26, 45, 51, 0.024),
+                 0.0625rem 0.125rem 0.75rem rgba(26, 45, 51, 0.03),
+                 0.1125rem 0.225rem 1.35rem rgba(26, 45, 51, 0.036),
+                 0.2085rem 0.417rem 2.502rem rgba(26, 45, 51, 0.04302),
+                 0.5rem 1rem 6rem rgba(26, 45, 51, 0.06),
+                 0 0 0 0.0625rem rgba(26, 45, 51, 0.015))
+);
 
 // DARK:
 //  bg_0        #103c48
@@ -82,28 +81,30 @@ $light-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(26, 45, 51, 0.01698),
 //  br_orange   #fd9456
 //  br_violet   #bd96fa
 
-$dark-bg: #103c48 !default; // bg_0
-$dark-card-bg: #002c38 !default; // not in selenized
-$dark-accent-bg: #174956 !default; // bg_1
-$dark-contrast-bg: #325b66 !default; // bg_2
-$dark-text: #cad8d9 !default; // fg_1
-$dark-text-vivid: white !default;
-$dark-text-light: #adbcbc !default; // fg_2
-$dark-text-heading: $dark-text !default;
-$dark-border: #72898f !default; // dim_0
-$dark-accent: #ebc13d !default; // br_yellow
-$dark-code: #dbb32d !default; // yellow
-$dark-preformatted: #cad8d9 !default; // fg_1 (same as text)
-$dark-marked: #fa5750 !default; // red
-$dark-disabled: #000 !default; // not in selentized
-$dark-info: lightskyblue !default;
-$dark-warning: gold !default;
-$dark-error: orangered !default;
-$dark-success: springgreen !default;
-$dark-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(23, 0, 44, 0.01698),
-                  0.0335rem 0.067rem 0.402rem rgba(23, 0, 44, 0.024),
-                  0.0625rem 0.125rem 0.75rem rgba(23, 0, 44, 0.03),
-                  0.1125rem 0.225rem 1.35rem rgba(23, 0, 44, 0.036),
-                  0.2085rem 0.417rem 2.502rem rgba(23, 0, 44, 0.04302),
-                  0.5rem 1rem 6rem rgba(23, 0, 44, 0.06),
-                  0 0 0 0.0625rem rgba(23, 0, 44, 0.015);
+$dark: (
+  "bg": #103c48, // bg_0
+  "card-bg": #002c38, // not in selenized
+  "accent-bg": #174956, // bg_1
+  "contrast-bg": #325b66, // bg_2
+  "text": #cad8d9, // fg_1
+  "text-vivid": white,
+  "text-light": #adbcbc, // fg_2
+  "text-heading": #cad8d9,
+  "border": #72898f, // dim_0
+  "accent": #ebc13d, // br_yellow
+  "code": #dbb32d, // yellow
+  "preformatted": #cad8d9, // fg_1 (same as text)
+  "marked": #fa5750, // red
+  "disabled": #000, // not in selentized
+  "info": lightskyblue,
+  "warning": gold,
+  "error": orangered,
+  "success": springgreen,
+  "box-shadow": (0.0145rem 0.029rem 0.174rem rgba(23, 0, 44, 0.01698),
+                 0.0335rem 0.067rem 0.402rem rgba(23, 0, 44, 0.024),
+                 0.0625rem 0.125rem 0.75rem rgba(23, 0, 44, 0.03),
+                 0.1125rem 0.225rem 1.35rem rgba(23, 0, 44, 0.036),
+                 0.2085rem 0.417rem 2.502rem rgba(23, 0, 44, 0.04302),
+                 0.5rem 1rem 6rem rgba(23, 0, 44, 0.06),
+                 0 0 0 0.0625rem rgba(23, 0, 44, 0.015))
+) !default;

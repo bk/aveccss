@@ -12,6 +12,11 @@
 //
 // Depends on _vars.scss.
 
+@use "sass:map";
+@use "../vars/avec";
+
+$bp: avec.$bp !default;
+
 .grid > *, .grid-sm > * {
     margin-bottom: var(--row-gap);
 }
@@ -44,7 +49,7 @@
         --grid-max-col-width: calc((100% - calc(3 * var(--column-gap))) / 4);
     }
 }
-@media (min-width: $bp-sm) {
+@media (min-width: map.get($bp, "sm")) {
     .grid-xs, .grid-sm {
         &.c2-sm {
             --grid-max-col-width: calc((100% - var(--column-gap)) / 2);
@@ -84,7 +89,7 @@
         }
     }
 }
-@media (min-width: $bp-md) {
+@media (min-width: map.get($bp, "md")) {
     .grid-xs, .grid-sm {
         &.c2-md {
             --grid-max-col-width: calc((100% - var(--column-gap)) / 2);
@@ -160,7 +165,7 @@
         }
     }
 }
-@media (min-width: $bp-lg) {
+@media (min-width: map.get($bp, "lg")) {
     .grid, .grid-xs, .grid-sm {
         &.c3-lg {
             --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
@@ -194,7 +199,7 @@
         }
     }
 }
-@media (min-width: $bp-xl) {
+@media (min-width: map.get($bp, "xl")) {
     .grid, grid-xs, .grid-sm {
         &.c3-xl {
             --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);

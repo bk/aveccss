@@ -1,6 +1,6 @@
 // Override non-color variables from default stylesheet
-@import "../../vars/fonts";
+@use "../../vars/fonts";
 
 :root {
-  --main-font: #{$sans-font};
+  --main-font: #{fonts.$sans-font};
 }

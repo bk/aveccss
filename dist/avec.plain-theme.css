@@ -1,4 +1,4 @@
-/* AvecCSS v1.3.2- Plain theme */
+/* AvecCSS v2.0 - Plain theme */
 :root, .light-theme {
   --bg: #fff;
   --card-bg: #eee;
@@ -21,7 +21,8 @@
   --success: forestgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 .dark-theme, .reverse-theme, .light-theme .reverse-theme {
   --bg: #111016;
@@ -45,7 +46,8 @@
   --success: springgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -69,7 +71,8 @@
     --success: springgreen;
     --button-text: var(--bg);
     --mark-text: var(--text);
-    --code-bg: var(--accent-bg); }
+    --code-bg: var(--accent-bg);
+  }
   .reverse-theme {
     --bg: #fff;
     --card-bg: #eee;
@@ -92,8 +95,9 @@
     --success: forestgreen;
     --button-text: var(--bg);
     --mark-text: var(--text);
-    --code-bg: var(--accent-bg); } }
-
+    --code-bg: var(--accent-bg);
+  }
+}
 .dark-theme .reverse-theme {
   --bg: #fff;
   --card-bg: #eee;
@@ -116,7 +120,9 @@
   --success: forestgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 :root {
-  --main-font: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif; }
+  --main-font: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
+}

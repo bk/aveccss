@@ -1,3 +1,13 @@
+@use "../vars/fonts";
+
+$main-font: fonts.$main-font !default;
+$mono-font: fonts.$mono-font !default;
+$sans-font: fonts.$sans-font !default;
+$serif-font: fonts.$serif-font !default;
+$heading-font: fonts.$heading-font !default;
+$heading-weight: fonts.$heading-weight !default;
+$body-font-size: fonts.$body-font-size !default;
+
 :root {
   --main-font: #{$main-font};
   --mono-font: #{$mono-font};

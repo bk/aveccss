@@ -1,8 +1,9 @@
-/* AvecCSS v1.3.2- default theme */
-$classless: false;
-@import "vars/themes/default";
-@import "base/theme";
-
+/* AvecCSS v2.0 - Default theme */
+@use "vars/themes/default";
+@use "base/theme" with (
+  $light: default.$light,
+  $dark: default.$dark
+);
 
 button,
 [role="button"],

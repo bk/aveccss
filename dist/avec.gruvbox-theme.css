@@ -1,4 +1,4 @@
-/* AvecCSS v1.3.2- Gruvbox theme */
+/* AvecCSS v2.0 - Gruvbox theme */
 :root, .light-theme {
   --bg: #f9f5d7;
   --card-bg: #fffadd;
@@ -21,7 +21,8 @@
   --success: forestgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 .dark-theme, .reverse-theme, .light-theme .reverse-theme {
   --bg: #282828;
@@ -45,7 +46,8 @@
   --success: springgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -69,7 +71,8 @@
     --success: springgreen;
     --button-text: var(--bg);
     --mark-text: var(--text);
-    --code-bg: var(--accent-bg); }
+    --code-bg: var(--accent-bg);
+  }
   .reverse-theme {
     --bg: #f9f5d7;
     --card-bg: #fffadd;
@@ -92,8 +95,9 @@
     --success: forestgreen;
     --button-text: var(--bg);
     --mark-text: var(--text);
-    --code-bg: var(--accent-bg); } }
-
+    --code-bg: var(--accent-bg);
+  }
+}
 .dark-theme .reverse-theme {
   --bg: #f9f5d7;
   --card-bg: #fffadd;
@@ -116,4 +120,5 @@
   --success: forestgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}

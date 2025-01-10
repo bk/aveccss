@@ -1,5 +1,7 @@
-/* AvecCSS v1.3.2- Selenized theme */
-$classless: false;
-@import "vars/themes/selenized";
-@import "base/theme";
-@import "base/theme-hooks/selenized";
+/* AvecCSS v2.0 - Selenized theme */
+@use "vars/themes/selenized";
+@use "base/theme" with (
+  $light: selenized.$light,
+  $dark: selenized.$dark
+);
+@use "base/theme-hooks/selenized" as hooks;

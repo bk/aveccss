@@ -1,4 +1,7 @@
-/* AvecCSS v1.3.2- Pico theme */
-$classless: false;
-@import "vars/themes/pico";
-@import "base/theme";
+/* AvecCSS v2.0 - Pico theme */
+@use "vars/themes/pico";
+@use "base/theme" with (
+  $light: pico.$light,
+  $dark: pico.$dark
+);
+// NOTE: base/theme-hooks/pico not used

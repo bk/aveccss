@@ -1,29 +1,28 @@
 // Slimmed-down version of avecCSS.
 // - Without most layout features and utility classes.
 // - No forms settings except for buttons.
-/* AvecCSS - slim v1.3.2*/
-@import "vars/avec";
-@import "vars/fonts";
-@import "vars/breakpoints";
-@import "vars/themes/default";
+/* AvecCSS - slim v2.0 */
+@use "vars/avec";
+@use "vars/fonts" as fontvars;
+@use "vars/themes/default";
 
-@import "base/normalize";
-@import "base/fonts";
-@import "base/theme";
-@import "base/basic";
+@use "base/normalize";
+@use "base/fonts";
+@use "base/theme";
+@use "base/basic" as base_basic;
 
-@import "layout/vars";
-@import "layout/basic";
-@import "layout/container";
-@import "layout/nav";
-@import "layout/img";
+@use "layout/vars";
+@use "layout/basic";
+@use "layout/container";
+@use "layout/nav";
+@use "layout/img";
 
-@import "typography/headings";
-@import "typography/links";
-@import "typography/code";
-@import "typography/table";
-@import "typography/blockquote";
-@import "typography/lists";
-@import "typography/misc";
+@use "typography/headings";
+@use "typography/links";
+@use "typography/code";
+@use "typography/table";
+@use "typography/blockquote";
+@use "typography/lists";
+@use "typography/misc";
 
-@import "forms/buttons";
+@use "forms/buttons";

@@ -1,5 +1,11 @@
 // A card is just an article
 
+@use "sass:map";
+@use "../vars/avec";
+
+$conf: () !default;
+$conf: map.merge(avec.$conf, $conf);
+
 article {
     margin: calc(var(--spacing) * 2) 0;
     padding: var(--spacing) calc(var(--spacing) * 2);
@@ -41,7 +47,7 @@ article {
 
 // Make sure the footer is at the bottom
 // when cards are side-by side.
-@if not ($classless) {
+@if not (map.get($conf, "classless")) {
 .grid > article, .grid-sm > article, .grid-xs > article {
     display: flex;
     flex-direction: column;

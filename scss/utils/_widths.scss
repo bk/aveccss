@@ -1,4 +1,8 @@
 // Widths
+@use "sass:map";
+@use "../vars/avec";
+
+$bp: avec.$bp !default;
 
 .w0 { width: 0; }
 .w10 {  width: 10%; }
@@ -15,7 +19,7 @@
 .w100 { width: 100%; }
 .wa { width: auto !important; }
 
-@media (min-width: $bp-sm) {
+@media (min-width: map.get($bp, "sm")) {
     .w0-sm { width: 0; }
     .w10-sm {  width: 10%; }
     .w20-sm {  width: 20%; }
@@ -31,7 +35,7 @@
     .w100-sm { width: 100%; }
     .wa-sm { width: auto !important; }
 }
-@media (min-width: $bp-md) {
+@media (min-width: map.get($bp, "md")) {
     .w0-md { width: 0; }
     .w10-md {  width: 10%; }
     .w20-md {  width: 20%; }
@@ -47,7 +51,7 @@
     .w100-md { width: 100%; }
     .wa-md { width: auto !important; }
 }
-@media (min-width: $bp-lg) {
+@media (min-width: map.get($bp, "lg")) {
     .w0-lg { width: 0; }
     .w10-lg {  width: 10%; }
     .w20-lg {  width: 20%; }
@@ -63,7 +67,7 @@
     .w100-lg { width: 100%; }
     .wa-lg { width: auto !important; }
 }
-@media (min-width: $bp-xl) {
+@media (min-width: map.get($bp, "xl")) {
     .w0-xl { width: 0; }
     .w10-xl {  width: 10%; }
     .w20-xl {  width: 20%; }

@@ -3,6 +3,12 @@
 // For backward compatibility, role="dropdown" is also supported although that
 // is not on the list of valid ARIA role names.
 
+@use "sass:map";
+@use "../vars/avec";
+
+$conf: () !default;
+$conf: map.merge(avec.$conf, $conf);
+
 details[role="dropdown"], details[role="menu"] {
     position: relative;
     padding: var(--spacing);
@@ -31,7 +37,7 @@ details[role="dropdown"], details[role="menu"] {
             display: none;
         }
     }
-    @if not ($classless) {
+    @if not (map.get($conf, "classless")) {
       &.active > summary {
         font-weight: bold;
       }
@@ -43,7 +49,7 @@ details[role="dropdown"], details[role="menu"] {
         min-width: 100%;
         top: auto;
         left: 0;
-        @if not ($classless) {
+        @if not (map.get($conf, "classless")) {
           &.rightset {
             left: auto;
             right: 0;
@@ -63,7 +69,7 @@ details[role="dropdown"], details[role="menu"] {
             padding: calc(var(--spacing) * 0.25) var(--spacing);
             text-align: left;
             white-space: nowrap;
-            @if ($classless) {
+            @if map.get($conf, "classless") {
               &:hover {
                 background: var(--contrast-bg);
               }

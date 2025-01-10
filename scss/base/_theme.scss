@@ -1,25 +1,35 @@
+@use "sass:map";
+@use "../vars/avec";
+@use "../vars/themes/default" as default_theme;
+
+$light: default_theme.$light !default;
+$dark: default_theme.$dark !default;
+$conf: () !default;
+
+$conf: map.merge(avec.$conf, $conf);
+
 :root, .light-theme {
   // default light theme
-  --bg: #{$light-bg};
-  --card-bg: #{$light-card-bg};
-  --accent-bg: #{$light-accent-bg};
-  --contrast-bg: #{$light-contrast-bg};
-  --text: #{$light-text};
-  --text-light: #{$light-text-light};
-  --text-vivid: #{$light-text-vivid};
-  --text-heading: #{$light-text-heading};
-  --border: #{$light-border};
-  --accent: #{$light-accent};
-  --code: #{$light-code};
-  --preformatted: #{$light-preformatted};
-  --marked: #{$light-marked};
-  --disabled: #{$light-disabled};
-  --box-shadow: #{$light-box-shadow};
-  --info: #{$light-info};
-  --warning: #{$light-warning};
-  --error: #{$light-error};
-  --success: #{$light-success};
-  // Firefox wants this to be redefined, Chrome/Safari don't care
+  --bg: #{map.get($light, "bg")};
+  --card-bg: #{map.get($light, "card-bg")};
+  --accent-bg: #{map.get($light, "accent-bg")};
+  --contrast-bg: #{map.get($light, "contrast-bg")};
+  --text: #{map.get($light, "text")};
+  --text-light: #{map.get($light, "text-light")};
+  --text-vivid: #{map.get($light, "text-vivid")};
+  --text-heading: #{map.get($light, "text-heading")};
+  --border: #{map.get($light, "border")};
+  --accent: #{map.get($light, "accent")};
+  --code: #{map.get($light, "code")};
+  --preformatted: #{map.get($light, "preformatted")};
+  --marked: #{map.get($light, "marked")};
+  --disabled: #{map.get($light, "disabled")};
+  --box-shadow: #{map.get($light, "box-shadow")};
+  --info: #{map.get($light, "info")};
+  --warning: #{map.get($light, "warning")};
+  --error: #{map.get($light, "error")};
+  --success: #{map.get($light, "success")};
+  // Firefox wants this to be reiterated, Chrome/Safari don't care
   --button-text: var(--bg);
   --mark-text: var(--text);
   --code-bg: var(--accent-bg);
@@ -27,92 +37,92 @@
 
 // Dark theme 
 // .reverse-theme switches to dark theme if light theme is in effect, and vice versa
-@if not ($classless) {
+@if not (map.get($conf, "classless")) {
 .dark-theme, .reverse-theme, .light-theme .reverse-theme {
-  --bg: #{$dark-bg};
-  --card-bg: #{$dark-card-bg};
-  --accent-bg: #{$dark-accent-bg};
-  --contrast-bg: #{$dark-contrast-bg};
-  --text: #{$dark-text};
-  --text-light: #{$dark-text-light};
-  --text-vivid: #{$dark-text-vivid};
-  --text-heading: #{$dark-text-heading};
-  --border: #{$dark-border};
-  --accent: #{$dark-accent};
-  --code: #{$dark-code};
-  --preformatted: #{$dark-preformatted};
-  --marked: #{$dark-marked};
-  --disabled: #{$dark-disabled};
-  --box-shadow: #{$dark-box-shadow};
-  --info: #{$dark-info};
-  --warning: #{$dark-warning};
-  --error: #{$dark-error};
-  --success: #{$dark-success};
-  // Firefox wants this to be redefined, Chrome/Safari don't care
+  --bg: #{map.get($dark, "bg")};
+  --card-bg: #{map.get($dark, "card-bg")};
+  --accent-bg: #{map.get($dark, "accent-bg")};
+  --contrast-bg: #{map.get($dark, "contrast-bg")};
+  --text: #{map.get($dark, "text")};
+  --text-light: #{map.get($dark, "text-light")};
+  --text-vivid: #{map.get($dark, "text-vivid")};
+  --text-heading: #{map.get($dark, "text-heading")};
+  --border: #{map.get($dark, "border")};
+  --accent: #{map.get($dark, "accent")};
+  --code: #{map.get($dark, "code")};
+  --preformatted: #{map.get($dark, "preformatted")};
+  --marked: #{map.get($dark, "marked")};
+  --disabled: #{map.get($dark, "disabled")};
+  --box-shadow: #{map.get($dark, "box-shadow")};
+  --info: #{map.get($dark, "info")};
+  --warning: #{map.get($dark, "warning")};
+  --error: #{map.get($dark, "error")};
+  --success: #{map.get($dark, "success")};
+  // Firefox wants this to be reiterated, Chrome/Safari don't care
   --button-text: var(--bg);
   --mark-text: var(--text);
   --code-bg: var(--accent-bg);
 }
 }
 
-@if $theme-auto-switch {
+@if map.get($conf, "theme-auto-switch") {
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #{$dark-bg};
-      --card-bg: #{$dark-card-bg};
-      --accent-bg: #{$dark-accent-bg};
-      --contrast-bg: #{$dark-contrast-bg};
-      --text: #{$dark-text};
-      --text-light: #{$dark-text-light};
-      --text-vivid: #{$dark-text-vivid};
-      --text-heading: #{$dark-text-heading};
-      --border: #{$dark-border};
-      --accent: #{$dark-accent};
-      --code: #{$dark-code};
-      --preformatted: #{$dark-preformatted};
-      --disabled: #{$dark-disabled};
-      --box-shadow: #{$dark-box-shadow};
-      --info: #{$dark-info};
-      --warning: #{$dark-warning};
-      --error: #{$dark-error};
-      --success: #{$dark-success};
-      // Firefox wants this to be redefined, Chrome/Safari don't care
+      --bg: #{map.get($dark, "bg")};
+      --card-bg: #{map.get($dark, "card-bg")};
+      --accent-bg: #{map.get($dark, "accent-bg")};
+      --contrast-bg: #{map.get($dark, "contrast-bg")};
+      --text: #{map.get($dark, "text")};
+      --text-light: #{map.get($dark, "text-light")};
+      --text-vivid: #{map.get($dark, "text-vivid")};
+      --text-heading: #{map.get($dark, "text-heading")};
+      --border: #{map.get($dark, "border")};
+      --accent: #{map.get($dark, "accent")};
+      --code: #{map.get($dark, "code")};
+      --preformatted: #{map.get($dark, "preformatted")};
+      --disabled: #{map.get($dark, "disabled")};
+      --box-shadow: #{map.get($dark, "box-shadow")};
+      --info: #{map.get($dark, "info")};
+      --warning: #{map.get($dark, "warning")};
+      --error: #{map.get($dark, "error")};
+      --success: #{map.get($dark, "success")};
+      // Firefox wants this to be reiterated, Chrome/Safari don't care
       --button-text: var(--bg);
       --mark-text: var(--text);
       --code-bg: var(--accent-bg);
     }
-    @if $dark-mode-antiglare {
+    @if map.get($conf, "dark-mode-antiglare") {
       img,
       video {
         opacity: 0.8;
       }
     }
-    @if not ($classless) {
+    @if not (map.get($conf, "classless")) {
     .reverse-theme {
-      --bg: #{$light-bg};
-      --card-bg: #{$light-card-bg};
-      --accent-bg: #{$light-accent-bg};
-      --contrast-bg: #{$light-contrast-bg};
-      --text: #{$light-text};
-      --text-light: #{$light-text-light};
-      --text-vivid: #{$light-text-vivid};
-      --text-heading: #{$light-text-heading};
-      --border: #{$light-border};
-      --accent: #{$light-accent};
-      --code: #{$light-code};
-      --preformatted: #{$light-preformatted};
-      --marked: #{$light-marked};
-      --disabled: #{$light-disabled};
-      --box-shadow: #{$light-box-shadow};
-      --info: #{$light-info};
-      --warning: #{$light-warning};
-      --error: #{$light-error};
-      --success: #{$light-success};
-      // Firefox wants this to be redefined, Chrome/Safari don't care
+      --bg: #{map.get($light, "bg")};
+      --card-bg: #{map.get($light, "card-bg")};
+      --accent-bg: #{map.get($light, "accent-bg")};
+      --contrast-bg: #{map.get($light, "contrast-bg")};
+      --text: #{map.get($light, "text")};
+      --text-light: #{map.get($light, "text-light")};
+      --text-vivid: #{map.get($light, "text-vivid")};
+      --text-heading: #{map.get($light, "text-heading")};
+      --border: #{map.get($light, "border")};
+      --accent: #{map.get($light, "accent")};
+      --code: #{map.get($light, "code")};
+      --preformatted: #{map.get($light, "preformatted")};
+      --marked: #{map.get($light, "marked")};
+      --disabled: #{map.get($light, "disabled")};
+      --box-shadow: #{map.get($light, "box-shadow")};
+      --info: #{map.get($light, "info")};
+      --warning: #{map.get($light, "warning")};
+      --error: #{map.get($light, "error")};
+      --success: #{map.get($light, "success")};
+      // Firefox wants this to be reiterated, Chrome/Safari don't care
       --button-text: var(--bg);
       --mark-text: var(--text);
       --code-bg: var(--accent-bg);
-      @if $dark-mode-antiglare {
+      @if map.get($dark, "mode-antiglare") {
         img,
         video {
           opacity: 1;
@@ -123,28 +133,28 @@
   }
 }
 
-@if not ($classless) {
+@if not (map.get($conf, "classless")) {
 .dark-theme .reverse-theme {
-  --bg: #{$light-bg};
-  --card-bg: #{$light-card-bg};
-  --accent-bg: #{$light-accent-bg};
-  --contrast-bg: #{$light-contrast-bg};
-  --text: #{$light-text};
-  --text-light: #{$light-text-light};
-  --text-vivid: #{$light-text-vivid};
-  --text-heading: #{$light-text-heading};
-  --border: #{$light-border};
-  --accent: #{$light-accent};
-  --code: #{$light-code};
-  --preformatted: #{$light-preformatted};
-  --marked: #{$light-marked};
-  --disabled: #{$light-disabled};
-  --box-shadow: #{$light-box-shadow};
-  --info: #{$light-info};
-  --warning: #{$light-warning};
-  --error: #{$light-error};
-  --success: #{$light-success};
-  // Firefox wants this to be redefined, Chrome/Safari don't care
+  --bg: #{map.get($light, "bg")};
+  --card-bg: #{map.get($light, "card-bg")};
+  --accent-bg: #{map.get($light, "accent-bg")};
+  --contrast-bg: #{map.get($light, "contrast-bg")};
+  --text: #{map.get($light, "text")};
+  --text-light: #{map.get($light, "text-light")};
+  --text-vivid: #{map.get($light, "text-vivid")};
+  --text-heading: #{map.get($light, "text-heading")};
+  --border: #{map.get($light, "border")};
+  --accent: #{map.get($light, "accent")};
+  --code: #{map.get($light, "code")};
+  --preformatted: #{map.get($light, "preformatted")};
+  --marked: #{map.get($light, "marked")};
+  --disabled: #{map.get($light, "disabled")};
+  --box-shadow: #{map.get($light, "box-shadow")};
+  --info: #{map.get($light, "info")};
+  --warning: #{map.get($light, "warning")};
+  --error: #{map.get($light, "error")};
+  --success: #{map.get($light, "success")};
+  // Firefox wants this to be reiterated, Chrome/Safari don't care
   --button-text: var(--bg);
   --mark-text: var(--text);
   --code-bg: var(--accent-bg);

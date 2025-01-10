@@ -1,4 +1,6 @@
-/* AvecCSS v1.3.2- One theme */
-$classless: false;
-@import "vars/themes/one";
-@import "base/theme";
+/* AvecCSS v2.0 - One theme */
+@use "vars/themes/one";
+@use "base/theme" with (
+  $light: one.$light,
+  $dark: one.$dark
+);

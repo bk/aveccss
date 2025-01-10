@@ -1,39 +1,40 @@
 // AvecCSS without classes. Obviously missing many features,
 // but nevertheless has some widgets missing from the slim variant.
-/* AvecCSS - classless v1.3.2*/
+/* AvecCSS - classless v2.0 */
 
-$classless: true;
-@import "vars/fonts";
-@import "vars/breakpoints";
-@import "vars/themes/default";
+$conf: ("classless": true);
 
-@import "base/normalize";
-@import "base/fonts";
-@import "base/theme";
-@import "base/basic";
+@use "vars/avec" with ($conf: $conf);
+@use "vars/fonts" as fontvars;
+@use "vars/themes/default";
 
-@import "layout/vars";
-@import "layout/basic";
-@import "layout/container-classless";
-@import "layout/nav";
-@import "layout/img";
-@import "layout/aside";
+@use "base/normalize";
+@use "base/fonts";
+@use "base/theme";
+@use "base/basic" as base_basic;
 
-@import "typography/headings";
-@import "typography/links";
-@import "typography/code";
-@import "typography/table";
-@import "typography/blockquote";
-@import "typography/lists";
-@import "typography/misc";
+@use "layout/vars";
+@use "layout/basic";
+@use "layout/container-classless";
+@use "layout/nav";
+@use "layout/img";
+@use "layout/aside";
 
-@import "forms/buttons";
-@import "forms/input";
-@import "forms/label";
-@import "forms/select";
+@use "typography/headings";
+@use "typography/links";
+@use "typography/code";
+@use "typography/table";
+@use "typography/blockquote";
+@use "typography/lists";
+@use "typography/misc";
 
-@import "widgets/accordion";
-@import "widgets/card";
-@import "widgets/dropdown";
+@use "forms/buttons";
+@use "forms/input";
+@use "forms/label";
+@use "forms/select";
 
-@import "utils/loading";
+@use "widgets/accordion";
+@use "widgets/card";
+@use "widgets/dropdown";
+
+@use "utils/loading";

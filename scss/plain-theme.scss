@@ -1,5 +1,7 @@
-/* AvecCSS v1.3.2- Plain theme */
-$classless: false;
-@import "vars/themes/plain";
-@import "base/theme";
-@import "base/theme-hooks/plain";
+/* AvecCSS v2.0 - Plain theme */
+@use "vars/themes/plain";
+@use "base/theme" with (
+  $light: plain.$light,
+  $dark: plain.$dark
+);
+@use "base/theme-hooks/plain" as hooks;

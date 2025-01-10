@@ -1,1 +1,28 @@
-$classless: false !default;
+@use "sass:map";
+
+$_default_conf: (
+  "classless": false,
+  "theme-auto-switch": true,   // switch to dark mode based on OS/browser preference
+  "dark-mode-antiglare": false // enable to darken images/videos in dark mode
+);
+$conf: () !default;
+$conf: map.merge($_default_conf, $conf);
+
+// Breakpoints. Assumes mobile-first (up to $bp-xs).
+$bp: (
+  "xs": 480px,
+  "sm": 768px,
+  "md": 960px,
+  "lg": 1280px,
+  "xl": 1600px
+) !default;
+
+// Default width of container
+$_default_container: (
+  "width": 54rem,
+  "max-width": 92%,
+  // Setting for .container.fixed between sm and lg
+  "fixed-margin": 25px
+);
+$container: () !default;
+$container: map.merge($_default_container, $container);

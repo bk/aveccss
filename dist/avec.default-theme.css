@@ -1,4 +1,4 @@
-/* AvecCSS v1.3.2- default theme */
+/* AvecCSS v2.0 - Default theme */
 :root, .light-theme {
   --bg: #f5f5f5;
   --card-bg: #ffffff;
@@ -21,7 +21,8 @@
   --success: forestgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 .dark-theme, .reverse-theme, .light-theme .reverse-theme {
   --bg: #212121;
@@ -45,7 +46,8 @@
   --success: springgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -69,7 +71,8 @@
     --success: springgreen;
     --button-text: var(--bg);
     --mark-text: var(--text);
-    --code-bg: var(--accent-bg); }
+    --code-bg: var(--accent-bg);
+  }
   .reverse-theme {
     --bg: #f5f5f5;
     --card-bg: #ffffff;
@@ -92,8 +95,9 @@
     --success: forestgreen;
     --button-text: var(--bg);
     --mark-text: var(--text);
-    --code-bg: var(--accent-bg); } }
-
+    --code-bg: var(--accent-bg);
+  }
+}
 .dark-theme .reverse-theme {
   --bg: #f5f5f5;
   --card-bg: #ffffff;
@@ -116,12 +120,14 @@
   --success: forestgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 button,
-[role="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-a[role="button"] {
-  font-family: var(--sans-font); }
+[role=button],
+input[type=submit],
+input[type=reset],
+input[type=button],
+a[role=button] {
+  font-family: var(--sans-font);
+}

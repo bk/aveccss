@@ -1,56 +1,60 @@
 // Default light/dark theme borrowed from simple.css
 
-$theme-auto-switch: true !default; // if true, switches to dark mode based on user preference
-$dark-mode-antiglare: false !default; // enable to darken images and videos in dark mode
+$light-text: #212121;
+$dark-text: #dcdcdc;
 
-$light-bg: #f5f5f5 !default;
-$light-card-bg: #ffffff !default;
-$light-accent-bg: #e6e9ef !default;
-$light-contrast-bg: #c6d9df !default;
-$light-text: #212121 !default;
-$light-text-vivid: black !default;
-$light-text-light: #585858 !default;
-$light-text-heading: $light-text !default;
-$light-border: #cccfd6 !default;
-$light-accent: #0d47a1 !default;
-$light-code: #771122 !default;
-$light-preformatted: #444 !default;
-$light-marked: #f5e595 !default;
-$light-disabled: #efefef !default;
-$light-info: mediumblue !default;
-$light-warning: darkorange !default;
-$light-error: firebrick !default;
-$light-success: forestgreen !default;
-$light-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
-                   0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.024),
-                   0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.03),
-                   0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.036),
-                   0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.04302),
-                   0.5rem 1rem 6rem rgba(27, 40, 50, 0.06),
-                   0 0 0 0.0625rem rgba(27, 40, 50, 0.015);
+$light: (
+  "bg": #f5f5f5,
+  "card-bg": #ffffff,
+  "accent-bg": #e6e9ef,
+  "contrast-bg": #c6d9df,
+  "text": $light-text,
+  "text-vivid": black,
+  "text-light": #585858,
+  "text-heading": $light-text,
+  "border": #cccfd6,
+  "accent": #0d47a1,
+  "code": #771122,
+  "preformatted": #444,
+  "marked": #f5e595,
+  "disabled": #efefef,
+  "info": mediumblue,
+  "warning": darkorange,
+  "error": firebrick,
+  "success": forestgreen,
+  "box-shadow": (0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
+                 0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.024),
+                 0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.03),
+                 0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.036),
+                 0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.04302),
+                 0.5rem 1rem 6rem rgba(27, 40, 50, 0.06),
+                 0 0 0 0.0625rem rgba(27, 40, 50, 0.015))
+) !default;
 
-$dark-bg: #212121 !default;
-$dark-card-bg: #2f3133 !default;
-$dark-accent-bg: #2b2b2b !default;
-$dark-contrast-bg: #353839 !default;
-$dark-text: #dcdcdc !default;
-$dark-text-vivid: white !default;
-$dark-text-light: #ababab !default;
-$dark-text-heading: $dark-text !default;
-$dark-border: #666 !default;
-$dark-accent: #ffb300 !default;
-$dark-code: #f06292 !default;
-$dark-preformatted: #ccc !default;
-$dark-marked: #039 !default;
-$dark-disabled: #111 !default;
-$dark-info: lightskyblue !default;
-$dark-warning: gold !default;
-$dark-error: orangered !default;
-$dark-success: springgreen !default;
-$dark-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
-                  0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
-                  0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
-                  0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
-                  0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
-                  0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
-                  0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
+$dark: (
+  "bg": #212121,
+  "card-bg": #2f3133,
+  "accent-bg": #2b2b2b,
+  "contrast-bg": #353839,
+  "text": $dark-text,
+  "text-vivid": white,
+  "text-light": #ababab,
+  "text-heading": $dark-text,
+  "border": #666,
+  "accent": #ffb300,
+  "code": #f06292,
+  "preformatted": #ccc,
+  "marked": #039,
+  "disabled": #111,
+  "info": lightskyblue,
+  "warning": gold,
+  "error": orangered,
+  "success": springgreen,
+  "box-shadow": (0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
+                 0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
+                 0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
+                 0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
+                 0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
+                 0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
+                 0 0 0 0.0625rem rgba(0, 0, 0, 0.015))
+) !default;

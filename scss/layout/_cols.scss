@@ -14,6 +14,10 @@
 // - A .cr2-.cr6 on a child indicates that it spans multiple rows, subsequent siblings
 //   filling the space to the right unless they are too wide or are explicitly set
 //   to start at a conflicting column.
+@use "sass:map";
+@use "../vars/avec";
+
+$bp: avec.$bp !default;
 
 .cols {
     display: grid;
@@ -28,22 +32,22 @@
     &.no-gap { grid-gap: 0; }
     &.no-colgap { grid-column-gap: 0; }
     &.no-rowgap { grid-row-gap: 0; }
-    @media (min-width: $bp-sm) {
+    @media (min-width: map.get($bp, "sm")) {
         &.no-gap-sm { grid-gap: 0; }
         &.no-colgap-sm { grid-column-gap: 0; }
         &.no-rowgap-sm { grid-row-gap: 0; }
     }
-    @media (min-width: $bp-md) {
+    @media (min-width: map.get($bp, "md")) {
         &.no-gap-md { grid-gap: 0; }
         &.no-colgap-md { grid-column-gap: 0; }
         &.no-rowgap-md { grid-row-gap: 0; }
     }
-    @media (min-width: $bp-lg) {
+    @media (min-width: map.get($bp, "lg")) {
         &.no-gap-lg { grid-gap: 0; }
         &.no-colgap-lg { grid-column-gap: 0; }
         &.no-rowgap-lg { grid-row-gap: 0; }
     }
-    @media (min-width: $bp-xl) {
+    @media (min-width: map.get($bp, "xl")) {
         &.no-gap-xl { grid-gap: 0; }
         &.no-colgap-xl { grid-column-gap: 0; }
         &.no-rowgap-xl { grid-row-gap: 0; }
@@ -53,28 +57,28 @@
     &.col-fourth > * { grid-column-end: span 3; }
     &.col-third > * { grid-column-end: span 4; }
     &.col-half > * { grid-column-end: span 6; }
-    @media (min-width: $bp-sm) {
+    @media (min-width: map.get($bp, "sm")) {
         &.col-twelfth-sm > * { grid-column-end: span 1; }
         &.col-sixth-sm > * { grid-column-end: span 2; }
         &.col-fourth-sm > * { grid-column-end: span 3; }
         &.col-third-sm > * { grid-column-end: span 4; }
         &.col-half-sm > * { grid-column-end: span 6; }
     }
-    @media (min-width: $bp-md) {
+    @media (min-width: map.get($bp, "md")) {
         &.col-twelfth-md > * { grid-column-end: span 1; }
         &.col-sixth-md > * { grid-column-end: span 2; }
         &.col-fourth-md > * { grid-column-end: span 3; }
         &.col-third-md > * { grid-column-end: span 4; }
         &.col-half-md > * { grid-column-end: span 6; }
     }
-    @media (min-width: $bp-lg) {
+    @media (min-width: map.get($bp, "lg")) {
         &.col-twelfth-lg > * { grid-column-end: span 1; }
         &.col-sixth-lg > * { grid-column-end: span 2; }
         &.col-fourth-lg > * { grid-column-end: span 3; }
         &.col-third-lg > * { grid-column-end: span 4; }
         &.col-half-lg > * { grid-column-end: span 6; }
     }
-    @media (min-width: $bp-xl) {
+    @media (min-width: map.get($bp, "xl")) {
         &.col-twelfth-xl > * { grid-column-end: span 1; }
         &.col-sixth-xl > * { grid-column-end: span 2; }
         &.col-fourth-xl > * { grid-column-end: span 3; }
@@ -107,7 +111,7 @@
     > .cw10 { grid-column-end: span 10; }
     > .cw11 { grid-column-end: span 11; }
     > .cw12 { grid-column-end: span 12; }
-    @media (min-width: $bp-sm) {
+    @media (min-width: map.get($bp, "sm")) {
         > .cs1-sm { grid-column-start: c 1; }
         > .cs2-sm { grid-column-start: c 2; }
         > .cs3-sm { grid-column-start: c 3; }
@@ -133,7 +137,7 @@
         > .cw11-sm { grid-column-end: span 11; }
         > .cw12-sm { grid-column-end: span 12; }
     }
-    @media (min-width: $bp-md) {
+    @media (min-width: map.get($bp, "md")) {
         > .cs1-md { grid-column-start: c 1; }
         > .cs2-md { grid-column-start: c 2; }
         > .cs3-md { grid-column-start: c 3; }
@@ -159,7 +163,7 @@
         > .cw11-md { grid-column-end: span 11; }
         > .cw12-md { grid-column-end: span 12; }
     }
-    @media (min-width: $bp-lg) {
+    @media (min-width: map.get($bp, "lg")) {
         > .cs1-lg { grid-column-start: c 1; }
         > .cs2-lg { grid-column-start: c 2; }
         > .cs3-lg { grid-column-start: c 3; }
@@ -185,7 +189,7 @@
         > .cw11-lg { grid-column-end: span 11; }
         > .cw12-lg { grid-column-end: span 12; }
     }
-    @media (min-width: $bp-xl) {
+    @media (min-width: map.get($bp, "xl")) {
         > .cs1-xl { grid-column-start: c 1; }
         > .cs2-xl { grid-column-start: c 2; }
         > .cs3-xl { grid-column-start: c 3; }
@@ -217,28 +221,28 @@
     .cr4 { grid-row: span 4; }
     .cr5 { grid-row: span 5; }
     .cr6 { grid-row: span 6; }
-    @media (min-width: $bp-sm) {
+    @media (min-width: map.get($bp, "sm")) {
         .cr2-sm { grid-row: span 2; }
         .cr3-sm { grid-row: span 3; }
         .cr4-sm { grid-row: span 4; }
         .cr5-sm { grid-row: span 5; }
         .cr6-sm { grid-row: span 6; }
     }
-    @media (min-width: $bp-md) {
+    @media (min-width: map.get($bp, "md")) {
         .cr2-md { grid-row: span 2; }
         .cr3-md { grid-row: span 3; }
         .cr4-md { grid-row: span 4; }
         .cr5-md { grid-row: span 5; }
         .cr6-md { grid-row: span 6; }
     }
-    @media (min-width: $bp-lg) {
+    @media (min-width: map.get($bp, "lg")) {
         .cr2-lg { grid-row: span 2; }
         .cr3-lg { grid-row: span 3; }
         .cr4-lg { grid-row: span 4; }
         .cr5-lg { grid-row: span 5; }
         .cr6-lg { grid-row: span 6; }
     }
-    @media (min-width: $bp-xl) {
+    @media (min-width: map.get($bp, "xl")) {
         .cr2-xl { grid-row: span 2; }
         .cr3-xl { grid-row: span 3; }
         .cr4-xl { grid-row: span 4; }

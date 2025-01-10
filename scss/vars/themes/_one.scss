@@ -1,8 +1,5 @@
 // One theme from base16
 
-$theme-auto-switch: true !default; // if true, switches to dark mode based on user preference
-$dark-mode-antiglare: false !default; // enable to darken images and videos in dark mode
-
 // scheme: "One Light"
 // author: "Daniel Pfeifer (http://github.com/purpleKarrot)"
 // base00: "#fafafa"
@@ -22,31 +19,33 @@ $dark-mode-antiglare: false !default; // enable to darken images and videos in d
 // base0E: "#a626a4"
 // base0F: "#986801"
 
-$light-bg: #f0f0f1 !default; // base01
-$light-card-bg: #fafafa !default; // base00
-$light-accent-bg: #efefe6 !default;  // base02
-$light-contrast-bg: #a0a1a7 !default; // base03
-$light-text: #090a0b!default; // base07
-$light-text-vivid: black !default;
-$light-text-light: #383a42 !default; // base05
-$light-text-heading: $light-text !default;
-$light-border: #696c77 !default; // base03
-$light-accent: #0184bc !default; // base0C
-$light-code: #ca1243 !default; // base08
-$light-preformatted: #202227 !default; // base06
-$light-marked: #ffcc66 !default; // not in original theme
-$light-disabled: #efefef !default; // not in original theme
-$light-info: mediumblue !default;
-$light-warning: darkorange !default;
-$light-error: firebrick !default;
-$light-success: forestgreen !default;
-$light-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
-                   0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.024),
-                   0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.03),
-                   0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.036),
-                   0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.04302),
-                   0.5rem 1rem 6rem rgba(27, 40, 50, 0.06),
-                   0 0 0 0.0625rem rgba(27, 40, 50, 0.015);
+$light: (
+  "bg": #f0f0f1, // base01
+  "card-bg": #fafafa, // base00
+  "accent-bg": #efefe6,  // base02
+  "contrast-bg": #a0a1a7, // base03
+  "text": #090a0b, // base07
+  "text-vivid": black,
+  "text-light": #383a42, // base05
+  "text-heading": #090a0b,
+  "border": #696c77, // base03
+  "accent": #0184bc, // base0C
+  "code": #ca1243, // base08
+  "preformatted": #202227, // base06
+  "marked": #ffcc66, // not in original theme
+  "disabled": #efefef, // not in original theme
+  "info": mediumblue,
+  "warning": darkorange,
+  "error": firebrick,
+  "success": forestgreen,
+  "box-shadow": (0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
+                 0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.024),
+                 0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.03),
+                 0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.036),
+                 0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.04302),
+                 0.5rem 1rem 6rem rgba(27, 40, 50, 0.06),
+                 0 0 0 0.0625rem rgba(27, 40, 50, 0.015))
+) !default;
 
 // scheme: "OneDark"
 // author: "Lalit Magant (http://github.com/tilal6991)"
@@ -67,28 +66,30 @@ $light-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
 // base0E: "#c678dd"
 // base0F: "#be5046"
 
-$dark-bg: #353b45 !default; // base01
-$dark-card-bg: #282c34 !default; // base00
-$dark-accent-bg: #3e4451 !default; // base02
-$dark-contrast-bg: #545862 !default; // base03
-$dark-text: #c8ccd4 !default; // base07
-$dark-text-vivid: white !default;
-$dark-text-light: #abb2bf !default; // base05
-$dark-text-heading: $dark-text !default;
-$dark-border: #545862 !default; // base03
-$dark-accent: #e5c07b !default; // base0A
-$dark-code: #f9d4d1 !default; // not in original theme
-$dark-preformatted: #b6bdca !default; // base06
-$dark-marked: #565c64 !default; // base04
-$dark-disabled: #111 !default; // not in original theme
-$dark-info: lightskyblue !default;
-$dark-warning: gold !default;
-$dark-error: orangered !default;
-$dark-success: springgreen !default;
-$dark-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
-                  0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
-                  0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
-                  0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
-                  0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
-                  0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
-                  0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
+$dark: (
+  "bg": #353b45, // base01
+  "card-bg": #282c34, // base00
+  "accent-bg": #3e4451, // base02
+  "contrast-bg": #545862, // base03
+  "text": #c8ccd4, // base07
+  "text-vivid": white,
+  "text-light": #abb2bf, // base05
+  "text-heading": #c8ccd4,
+  "border": #545862, // base03
+  "accent": #e5c07b, // base0A
+  "code": #f9d4d1, // not in original theme
+  "preformatted": #b6bdca, // base06
+  "marked": #565c64, // base04
+  "disabled": #111, // not in original theme
+  "info": lightskyblue,
+  "warning": gold,
+  "error": orangered,
+  "success": springgreen,
+  "box-shadow": (0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
+                 0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
+                 0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
+                 0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
+                 0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
+                 0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
+                 0 0 0 0.0625rem rgba(0, 0, 0, 0.015))
+) !default;

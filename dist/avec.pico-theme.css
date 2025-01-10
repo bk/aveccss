@@ -1,4 +1,4 @@
-/* AvecCSS v1.3.2- Pico theme */
+/* AvecCSS v2.0 - Pico theme */
 :root, .light-theme {
   --bg: #fdfdfe;
   --card-bg: #ffffff;
@@ -21,7 +21,8 @@
   --success: forestgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 .dark-theme, .reverse-theme, .light-theme .reverse-theme {
   --bg: #11191f;
@@ -45,7 +46,8 @@
   --success: springgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -69,7 +71,8 @@
     --success: springgreen;
     --button-text: var(--bg);
     --mark-text: var(--text);
-    --code-bg: var(--accent-bg); }
+    --code-bg: var(--accent-bg);
+  }
   .reverse-theme {
     --bg: #fdfdfe;
     --card-bg: #ffffff;
@@ -92,8 +95,9 @@
     --success: forestgreen;
     --button-text: var(--bg);
     --mark-text: var(--text);
-    --code-bg: var(--accent-bg); } }
-
+    --code-bg: var(--accent-bg);
+  }
+}
 .dark-theme .reverse-theme {
   --bg: #fdfdfe;
   --card-bg: #ffffff;
@@ -116,4 +120,5 @@
   --success: forestgreen;
   --button-text: var(--bg);
   --mark-text: var(--text);
-  --code-bg: var(--accent-bg); }
+  --code-bg: var(--accent-bg);
+}

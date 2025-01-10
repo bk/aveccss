@@ -1,6 +1,10 @@
 // .seen-xyz;
 // x=mobile, y=tablet+small desktop, z=normal+large desktop
 // Auxiliary classes: .inl, .tbl, .flx
+@use "sass:map";
+@use "../vars/avec";
+
+$bp: avec.$bp !default;
 
 .seen-000, .seen-001, .seen-010, .seen-011, .hidden {
     display: none !important;
@@ -17,7 +21,7 @@
         display: flex !important;
     }
 }
-@media (min-width: $bp-sm) { // 768px+
+@media (min-width: map.get($bp, "sm")) { // 768px+
     .seen-100, .seen-101 {
         display: none !important;
         &.inl, &tbl {
@@ -37,7 +41,7 @@
         }
     }
 }
-@media (min-width: $bp-lg ) { // 1280px+
+@media (min-width: map.get($bp, "lg") ) { // 1280px+
     .seen-100, .seen-010, .seen-110 {
         display: none !important;
         &.inl, &.tbl, &.flx {
@@ -60,10 +64,10 @@
 
 // .hidden-*
 
-@media (max-width: $bp-sm - 1px) { // seen-Xyz
+@media (max-width: map.get($bp, "sm") - 1px) { // seen-Xyz
     .hidden-xs { display: none !important; }
 }
-@media (min-width: $bp-sm) and (max-width: $bp-md - 1px) { // seen-xYz
+@media (min-width: map.get($bp, "sm")) and (max-width: map.get($bp, "md") - 1px) { // seen-xYz
     .hidden-sm,
     .seen-010.hidden-sm,
     .seen-011.hidden-sm,
@@ -71,7 +75,7 @@
         display: none !important;
     }
 }
-@media (min-width: $bp-md) and (max-width: $bp-lg - 1px) { // seen-xYz
+@media (min-width: map.get($bp, "md")) and (max-width: map.get($bp, "lg") - 1px) { // seen-xYz
     .hidden-md,
     .seen-010.hidden-md,
     .seen-011.hidden-md,
@@ -79,7 +83,7 @@
         display: none !important;
     }
 }
-@media (min-width: $bp-lg) and (max-width: $bp-xl - 1px) { // seen-xyZ
+@media (min-width: map.get($bp, "lg")) and (max-width: map.get($bp, "xl") - 1px) { // seen-xyZ
     .hidden-lg,
     .seen-001.hidden-lg,
     .seen-011.hidden-lg,
@@ -87,7 +91,7 @@
         display: none !important;
     }
 }
-@media (min-width: $bp-xl) { // seen-xyZ
+@media (min-width: map.get($bp, "xl")) { // seen-xyZ
     .hidden-xl,
     .seen-001.hidden-xl,
     .seen-011.hidden-xl,

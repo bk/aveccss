@@ -1,5 +1,11 @@
 // Table formatting
 
+@use "sass:map";
+@use "../vars/avec";
+
+$conf: () !default;
+$conf: map.merge(avec.$conf, $conf);
+
 table {
   margin: 1.5rem 0;
   overflow: auto;
@@ -29,7 +35,7 @@ table caption {
   margin-bottom: var(--spacing);
 }
 
-@if not ($classless) {
+@if not (map.get($conf, "classless")) {
 table.striped {
   th {
     background: var(--accent-bg);

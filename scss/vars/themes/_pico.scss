@@ -2,58 +2,58 @@
 // https://picocss.com/
 //
 
-$theme-auto-switch: true !default; // if true, switches to dark mode based on user preference
-$dark-mode-antiglare: false !default; // enable to darken images and videos in dark mode
+$light: (
+  "bg": #fdfdfe,
+  "card-bg": #ffffff,
+  "accent-bg": #f5f5f1,
+  "contrast-bg": #eaead1,
+  "text": #415462,
+  "text-vivid": black,
+  "text-light": #73828c,
+  "text-heading": #415462,
+  "border": #cdd0cf,
+  "accent": #1095c1,
+  "code": #73828c,
+  "preformatted": #73828c,
+  "marked": #fff2ca,
+  "disabled": #d5dce2,
+  "info": mediumblue,
+  "warning": darkorange,
+  "error": firebrick,
+  "success": forestgreen,
+  "box-shadow": (0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
+                 0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.024),
+                 0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.03),
+                 0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.036),
+                 0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.04302),
+                 0.5rem 1rem 6rem rgba(27, 40, 50, 0.06),
+                 0 0 0 0.0625rem rgba(27, 40, 50, 0.015))
+) !default;
 
-$light-bg: #fdfdfe !default;
-$light-card-bg: #ffffff !default;
-$light-accent-bg: #f5f5f1 !default;
-$light-contrast-bg: #eaead1 !default;
-$light-text: #415462 !default;
-$light-text-vivid: black !default;
-$light-text-light: #73828c !default;
-$light-text-heading: $light-text !default;
-$light-border: #cdd0cf !default;
-$light-accent: #1095c1 !default;
-$light-code: #73828c !default;
-$light-preformatted: #73828c !default;
-$light-marked: #fff2ca !default;
-$light-disabled: #d5dce2 !default;
-$light-info: mediumblue !default;
-$light-warning: darkorange !default;
-$light-error: firebrick !default;
-$light-success: forestgreen !default;
-$light-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
-                   0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.024),
-                   0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.03),
-                   0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.036),
-                   0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.04302),
-                   0.5rem 1rem 6rem rgba(27, 40, 50, 0.06),
-                   0 0 0 0.0625rem rgba(27, 40, 50, 0.015);
-
-
-$dark-bg: #11191f !default;
-$dark-card-bg: #141e26 !default;
-$dark-accent-bg: #18232c !default;
-$dark-contrast-bg: #283848 !default;
-$dark-text: #bbc6ce !default;
-$dark-text-vivid: white !default;
-$dark-text-light: #73828c !default;
-$dark-text-heading: $dark-text !default;
-$dark-border: #374956 !default;
-$dark-accent: #1095c1 !default;
-$dark-code: #73828c !default;
-$dark-preformatted: #73828c !default;
-$dark-marked: #1b5d77 !default;
-$dark-disabled: #2c3d49 !default;
-$dark-info: lightskyblue !default;
-$dark-warning: gold !default;
-$dark-error: orangered !default;
-$dark-success: springgreen !default;
-$dark-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
-                  0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
-                  0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
-                  0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
-                  0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
-                  0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
-                  0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
+$dark: (
+  "bg": #11191f,
+  "card-bg": #141e26,
+  "accent-bg": #18232c,
+  "contrast-bg": #283848,
+  "text": #bbc6ce,
+  "text-vivid": white,
+  "text-light": #73828c,
+  "text-heading": #bbc6ce,
+  "border": #374956,
+  "accent": #1095c1,
+  "code": #73828c,
+  "preformatted": #73828c,
+  "marked": #1b5d77,
+  "disabled": #2c3d49,
+  "info": lightskyblue,
+  "warning": gold,
+  "error": orangered,
+  "success": springgreen,
+  "box-shadow": (0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
+                 0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
+                 0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
+                 0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
+                 0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
+                 0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
+                 0 0 0 0.0625rem rgba(0, 0, 0, 0.015))
+) !default;

@@ -1,13 +1,18 @@
+@use "sass:map";
+@use "../vars/avec";
+
+$bp: avec.$bp !default;
+
 @mixin bp-fixed {
     width: auto;
-    @media (min-width: $bp-sm) {
+    @media (min-width: map.get($bp, "sm")) {
         max-width: 100%;
         width: calc(var(--bp-sm) - calc(var(--container-fixed-margin) * 2)); // 718px
     }
-    @media (min-width: $bp-md) {
+    @media (min-width: map.get($bp, "md")) {
         width: calc(var(--bp-md) - calc(var(--container-fixed-margin) * 2)); // 910px
     }
-    @media (min-width: $bp-lg) {
+    @media (min-width: map.get($bp, "lg")) {
         width: calc(var(--bp-lg) - calc(var(--container-fixed-margin) * 2)); // 1230px
     }
 }
@@ -35,13 +40,13 @@ body > main > *, .container > * {
     &.fixed {
         @include bp-fixed;
     }
-    @media (min-width: $bp-md) {
+    @media (min-width: map.get($bp, "md")) {
         &.max-md { max-width: calc(var(--bp-md) - calc(var(--container-fixed-margin) * 2)); }
     }
-    @media (min-width: $bp-lg) { // only needed for .fluid, has no effect on .fixed
+    @media (min-width: map.get($bp, "lg")) { // only needed for .fluid, has no effect on .fixed
         &.max-ml { max-width: calc(var(--bp-lg) - calc(var(--container-fixed-margin) * 2)); }
     }
-    @media (min-width: $bp-xl) {
+    @media (min-width: map.get($bp, "xl")) {
         &.max-xl { width: calc(var(--bp-xl) - calc(var(--container-fixed-margin) * 4)); } // 1500px
     }
 }
@@ -55,27 +60,27 @@ body > main.items-fixed > *, .container.items-fixed > * {
     &.normal { @include container-item-normal; }
     &.fluid  { width: auto; max-width: var(--container-max-width); }
     &.full   { width: 100%;  max-width: 100%;}
-    @media (min-width: $bp-md) {
+    @media (min-width: map.get($bp, "md")) {
         &.max-md { max-width: calc(var(--bp-md) - calc(var(--container-fixed-margin) * 2)); }
     }
-    @media (min-width: $bp-lg) {
+    @media (min-width: map.get($bp, "lg")) {
         &.max-lg { max-width: calc(var(--bp-lg) - calc(var(--container-fixed-margin) * 2)); }
     }
-    @media (min-width: $bp-xl) {
+    @media (min-width: map.get($bp, "xl")) {
         &.max-xl { width: calc(var(--bp-xl) - calc(var(--container-fixed-margin) * 4)); } // 1500px
     }
 }
-@media (min-width: $bp-md) {
+@media (min-width: map.get($bp, "md")) {
     body > main.items-max-md > *, .container.items-max-md > * {
         max-width: calc(var(--bp-md) - calc(var(--container-fixed-margin) * 2));
     }
 }
-@media (min-width: $bp-lg) { // only has an effect for .fluid, not .fixed
+@media (min-width: map.get($bp, "lg")) { // only has an effect for .fluid, not .fixed
     body > main.items-max-lg > *, .container.items-max-lg > * {
         max-width: calc(var(--bp-lg) - calc(var(--container-fixed-margin) * 2));
     }
 }
-@media (min-width: $bp-xl) {
+@media (min-width: map.get($bp, "xl")) {
     body > main.items-max-xl > *, .container.items-max-xl > * {
         width: calc(var(--bp-xl) - calc(var(--container-fixed-margin) * 4));
     }

@@ -15,6 +15,11 @@
 //   </article>
 // </div>
 
+@use "sass:map";
+@use "../vars/avec";
+
+$bp: avec.$bp !default;
+
 .modal {
   text-align: center;
 
@@ -69,10 +74,10 @@
       overflow: auto;
       transform: translateX(-50%) translateY(-50%) scale(1, 1);
       min-width: 90%;
-      @media (min-width: $bp-sm) {
+      @media (min-width: map.get($bp, "sm")) {
         min-width: auto;
       }
-      @media (min-width: $bp-md) {
+      @media (min-width: map.get($bp, "md")) {
         max-width: Min(var(--bp-sm), 70%);
       }
       label.close {
