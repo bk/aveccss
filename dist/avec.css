@@ -1464,7 +1464,7 @@ body > main.items-fixed > *.full, .container.items-fixed > *.full {
 }
 
 .als-center {
-  align-self: flex-center;
+  align-self: center;
 }
 
 .als-base {
@@ -1914,7 +1914,6 @@ table {
   margin: 1.5rem 0;
   overflow: auto;
   width: 100%;
-  border-bottom: 3px solid var(--border);
 }
 table thead {
   border-bottom: 3px solid var(--border);
@@ -1932,6 +1931,9 @@ table td, table th {
 }
 table tfoot {
   border-top: 2px solid var(--border);
+}
+table {
+  border-bottom: 3px solid var(--border);
 }
 
 table caption {
@@ -1952,7 +1954,7 @@ blockquote {
   border-left: 0.35rem solid var(--border);
 }
 blockquote cite {
-  font-size: calc(--var(--font-size) * 0.9);
+  font-size: calc(var(--font-size) * 0.9);
   color: var(--text-light);
   display: block;
   text-align: right;
@@ -2422,11 +2424,13 @@ article > footer > * {
   border: 1px solid transparent;
   border-top-left-radius: calc(var(--spacing) * 0.5);
   border-top-right-radius: calc(var(--spacing) * 0.5);
-  position: relative;
-  top: 1px;
 }
 .tabs > label:hover {
   background: var(--contrast-bg);
+}
+.tabs > label {
+  position: relative;
+  top: 1px;
 }
 .tabs > :checked + label {
   border: 1px solid var(--border);
@@ -2533,6 +2537,12 @@ details[role=dropdown] > ul, details[role=menu] > ul {
   min-width: 100%;
   top: auto;
   left: 0;
+}
+details[role=dropdown] > ul.rightset, details[role=menu] > ul.rightset {
+  left: auto;
+  right: 0;
+}
+details[role=dropdown] > ul, details[role=menu] > ul {
   display: flex;
   flex-direction: column;
   margin: var(--spacing) 0 0 0;
@@ -2541,10 +2551,6 @@ details[role=dropdown] > ul, details[role=menu] > ul {
   border-radius: var(--border-radius);
   background: var(--accent-bg);
   box-shadow: var(--box-shadow);
-}
-details[role=dropdown] > ul.rightset, details[role=menu] > ul.rightset {
-  left: auto;
-  right: 0;
 }
 details[role=dropdown] > ul > li, details[role=menu] > ul > li {
   margin: 0;

@@ -62,7 +62,7 @@ A theme is implemented as a set of SCSS variables defining the colors to use in 
 - One - based on a [light](https://github.com/purpleKarrot/base16-one-light-scheme) and a [dark](https://github.com/LalitMaganti/base16-onedark-scheme) base16 implmentation of the One color schema.
 - Pico (based on PicoCSS's default theme).
 - Plain (A simple black-and-white theme).
-- Selenized (similar to Solarized - based on the terminal terminal [color scheme](https://github.com/jan-warchol/selenized) by Jan Warchol.
+- Selenized (similar to Solarized - based on the terminal [color scheme](https://github.com/jan-warchol/selenized) by Jan Warchol.
 
 The themes are exported to separate CSS files which can be loaded after the main AvecCSS file. For instance, in order to switch to Selenized, you would do this:
 

@@ -694,7 +694,6 @@ table {
   margin: 1.5rem 0;
   overflow: auto;
   width: 100%;
-  border-bottom: 3px solid var(--border);
 }
 table thead {
   border-bottom: 3px solid var(--border);
@@ -712,6 +711,9 @@ table td, table th {
 }
 table tfoot {
   border-top: 2px solid var(--border);
+}
+table {
+  border-bottom: 3px solid var(--border);
 }
 
 table caption {
@@ -732,7 +734,7 @@ blockquote {
   border-left: 0.35rem solid var(--border);
 }
 blockquote cite {
-  font-size: calc(--var(--font-size) * 0.9);
+  font-size: calc(var(--font-size) * 0.9);
   color: var(--text-light);
   display: block;
   text-align: right;
