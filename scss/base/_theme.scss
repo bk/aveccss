@@ -122,7 +122,7 @@ $conf: map.merge(avec.$conf, $conf);
       --button-text: var(--bg);
       --mark-text: var(--text);
       --code-bg: var(--accent-bg);
-      @if map.get($dark, "mode-antiglare") {
+      @if map.get($conf, "dark-mode-antiglare") {
         img,
         video {
           opacity: 1;
