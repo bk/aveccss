@@ -200,7 +200,7 @@ $bp: avec.$bp !default;
     }
 }
 @media (min-width: map.get($bp, "xl")) {
-    .grid, grid-xs, .grid-sm {
+    .grid, .grid-xs, .grid-sm {
         &.c3-xl {
             --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
         }

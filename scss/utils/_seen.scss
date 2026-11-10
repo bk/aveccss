@@ -24,7 +24,7 @@ $bp: avec.$bp !default;
 @media (min-width: map.get($bp, "sm")) { // 768px+
     .seen-100, .seen-101 {
         display: none !important;
-        &.inl, &tbl {
+        &.inl, &.tbl, &.flx {
             display: none !important;
         }
     }

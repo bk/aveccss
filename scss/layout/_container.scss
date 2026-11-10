@@ -44,7 +44,7 @@ body > main > *, .container > * {
         &.max-md { max-width: calc(var(--bp-md) - calc(var(--container-fixed-margin) * 2)); }
     }
     @media (min-width: map.get($bp, "lg")) { // only needed for .fluid, has no effect on .fixed
-        &.max-ml { max-width: calc(var(--bp-lg) - calc(var(--container-fixed-margin) * 2)); }
+        &.max-lg { max-width: calc(var(--bp-lg) - calc(var(--container-fixed-margin) * 2)); }
     }
     @media (min-width: map.get($bp, "xl")) {
         &.max-xl { width: calc(var(--bp-xl) - calc(var(--container-fixed-margin) * 4)); } // 1500px
