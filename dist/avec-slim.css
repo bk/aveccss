@@ -441,7 +441,7 @@ body > main > *.fixed, .container > *.fixed {
   }
 }
 @media (min-width: 1280px) {
-  body > main > *.max-ml, .container > *.max-ml {
+  body > main > *.max-lg, .container > *.max-lg {
     max-width: calc(var(--bp-lg) - var(--container-fixed-margin) * 2);
   }
 }
@@ -622,7 +622,7 @@ a, [role=link] {
   color: var(--accent);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 8;
+  text-decoration-thickness: from-font;
   cursor: pointer;
 }
 a:hover, [role=link]:hover {
@@ -641,7 +641,7 @@ a.h, [role=link].h {
   font-family: var(--heading-font);
 }
 a.text, [role=link].text {
-  color: var(--text-color);
+  color: var(--text);
   text-decoration: none;
 }
 

@@ -442,7 +442,7 @@ body > main > *.fixed, .container > *.fixed {
   }
 }
 @media (min-width: 1280px) {
-  body > main > *.max-ml, .container > *.max-ml {
+  body > main > *.max-lg, .container > *.max-lg {
     max-width: calc(var(--bp-lg) - var(--container-fixed-margin) * 2);
   }
 }
@@ -694,34 +694,34 @@ body > main.items-fixed > *.full, .container.items-fixed > *.full {
   }
 }
 @media (min-width: 1600px) {
-  .grid.c3-xl, grid-xs.c3-xl, .grid-sm.c3-xl {
+  .grid.c3-xl, .grid-xs.c3-xl, .grid-sm.c3-xl {
     --grid-max-col-width: calc((100% - calc(2 * var(--column-gap))) / 3);
   }
-  .grid.c4-xl, grid-xs.c4-xl, .grid-sm.c4-xl {
+  .grid.c4-xl, .grid-xs.c4-xl, .grid-sm.c4-xl {
     --grid-max-col-width: calc((100% - calc(3 * var(--column-gap))) / 4);
   }
-  .grid.c5-xl, grid-xs.c5-xl, .grid-sm.c5-xl {
+  .grid.c5-xl, .grid-xs.c5-xl, .grid-sm.c5-xl {
     --grid-max-col-width: calc((100% - calc(4 * var(--column-gap))) / 5);
   }
-  .grid.c6-xl, grid-xs.c6-xl, .grid-sm.c6-xl {
+  .grid.c6-xl, .grid-xs.c6-xl, .grid-sm.c6-xl {
     --grid-max-col-width: calc((100% - calc(5 * var(--column-gap))) / 6);
   }
-  .grid.c7-xl, grid-xs.c7-xl, .grid-sm.c7-xl {
+  .grid.c7-xl, .grid-xs.c7-xl, .grid-sm.c7-xl {
     --grid-max-col-width: calc((100% - calc(6 * var(--column-gap))) / 7);
   }
-  .grid.c8-xl, grid-xs.c8-xl, .grid-sm.c8-xl {
+  .grid.c8-xl, .grid-xs.c8-xl, .grid-sm.c8-xl {
     --grid-max-col-width: calc((100% - calc(7 * var(--column-gap))) / 8);
   }
-  .grid.c9-xl, grid-xs.c9-xl, .grid-sm.c9-xl {
+  .grid.c9-xl, .grid-xs.c9-xl, .grid-sm.c9-xl {
     --grid-max-col-width: calc((100% - calc(8 * var(--column-gap))) / 9);
   }
-  .grid.c10-xl, grid-xs.c10-xl, .grid-sm.c10-xl {
+  .grid.c10-xl, .grid-xs.c10-xl, .grid-sm.c10-xl {
     --grid-max-col-width: calc((100% - calc(9 * var(--column-gap))) / 10);
   }
-  .grid.c11-xl, grid-xs.c11-xl, .grid-sm.c11-xl {
+  .grid.c11-xl, .grid-xs.c11-xl, .grid-sm.c11-xl {
     --grid-max-col-width: calc((100% - calc(10 * var(--column-gap))) / 11);
   }
-  .grid.c12-xl, grid-xs.c12-xl, .grid-sm.c12-xl {
+  .grid.c12-xl, .grid-xs.c12-xl, .grid-sm.c12-xl {
     --grid-max-col-width: calc((100% - calc(11 * var(--column-gap))) / 12);
   }
 }
@@ -1842,7 +1842,7 @@ a, [role=link] {
   color: var(--accent);
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 8;
+  text-decoration-thickness: from-font;
   cursor: pointer;
 }
 a:hover, [role=link]:hover {
@@ -1861,7 +1861,7 @@ a.h, [role=link].h {
   font-family: var(--heading-font);
 }
 a.text, [role=link].text {
-  color: var(--text-color);
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -2128,7 +2128,7 @@ fieldset legend, label {
   margin-bottom: calc(var(--spacing) * 0.5);
 }
 
-input:not([type=checkbox], [type=radio]),
+input:not([type=checkbox], [type=radio], [type=submit], [type=reset], [type=button]),
 select:not([multiple]),
 textarea {
   margin-bottom: var(--spacing);
@@ -2148,7 +2148,7 @@ input[type=range] {
 
 textarea,
 select,
-input:not([type=checkbox], [type=radio], [type=submit], [type=reset]) {
+input:not([type=checkbox], [type=radio], [type=submit], [type=reset], [type=button]) {
   font-size: inherit;
   font-family: inherit;
   padding: var(--spacing);
@@ -2774,7 +2774,7 @@ ul.tree details > summary {
   .seen-100, .seen-101 {
     display: none !important;
   }
-  .seen-100.inl, .seen-100tbl, .seen-101.inl, .seen-101tbl {
+  .seen-100.inl, .seen-100.tbl, .seen-100.flx, .seen-101.inl, .seen-101.tbl, .seen-101.flx {
     display: none !important;
   }
   .seen-010, .seen-011 {
