@@ -3,7 +3,7 @@ blockquote {
   padding: 0.4rem 0.8rem;
   border-left: 0.35rem solid var(--border);
   cite {
-      font-size: calc(--var(--font-size) * 0.9);
+      font-size: calc(var(--font-size) * 0.9);
       color: var(--text-light);
       display: block;
       text-align: right;
